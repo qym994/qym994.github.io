@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>qym的个人主页 Blog</title>
+        <link>https://qym994.github.io/</link>
+        <description>qym的个人主页 Blog</description>
+        <lastBuildDate>Sat, 01 Apr 2023 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>zh</language>
+        <item>
+            <title><![CDATA[不正经博客]]></title>
+            <link>https://qym994.github.io/first-blog-post</link>
+            <guid>https://qym994.github.io/first-blog-post</guid>
+            <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[不正经博客]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="不正经博客">不正经博客<a href="#不正经博客" class="hash-link" aria-label="不正经博客的直接链接" title="不正经博客的直接链接">​</a></h2><p>在一个不是很正经的日子里，我写下了这篇博客
+自己学习了很久的前端开发有了小的进展，这让我对未来充满了期待又有些迷茫。
+这次的选择题做对了吗?</p>]]></content:encoded>
+            <category>随笔</category>
+        </item>
+    </channel>
+</rss>

@@ -10,14 +10,84 @@
         <language>zh</language>
         <item>
             <title><![CDATA[不正经博客]]></title>
-            <link>https://qym994.github.io/first-blog-post</link>
-            <guid>https://qym994.github.io/first-blog-post</guid>
+            <link>https://qym994.github.io/不正经博客1</link>
+            <guid>https://qym994.github.io/不正经博客1</guid>
             <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[不正经博客]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="不正经博客">不正经博客<a href="#不正经博客" class="hash-link" aria-label="不正经博客的直接链接" title="不正经博客的直接链接">​</a></h2><p>在一个不是很正经的日子里，我写下了这篇博客
-自己学习了很久的前端开发有了小的进展，这让我对未来充满了期待又有些迷茫。
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="不正经博客">不正经博客<a href="#不正经博客" class="hash-link" aria-label="不正经博客的直接链接" title="不正经博客的直接链接">​</a></h2><p>在一个不是很正经的日子里，我写下了这篇博客</p><p>自己学习了很久的前端开发有了小的进展，这让我对未来充满了期待又有些迷茫。
 这次的选择题做对了吗?</p>]]></content:encoded>
             <category>随笔</category>
+        </item>
+        <item>
+            <title><![CDATA[常用的数组方法]]></title>
+            <link>https://qym994.github.io/qym-js-5</link>
+            <guid>https://qym994.github.io/qym-js-5</guid>
+            <pubDate>Wed, 11 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[常用的数组方法]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="常用的数组方法">常用的数组方法<a href="#常用的数组方法" class="hash-link" aria-label="常用的数组方法的直接链接" title="常用的数组方法的直接链接">​</a></h3><ol><li><code>Array.push()</code>将传入的参数追加到原数组的末尾，push方法可传多个参数和单个参数  </li></ol><ul><li><strong>如果传入另一个数组将不会拆分，会作为整体即一个子元素传入(可用...展开数组)</strong></li></ul><ol start="2"><li><code>Array.forEach((item,index,thisArr)=&gt;{})</code></li></ol><ul><li>item当前遍历到的元素，index遍历到的元素索引，thisArr表示当前数组
+3.<code>Array.map((item,index,thisArr)=&gt;{retrun xxx})</code>  </li><li>参数同上 <strong>xxx表示对数组的处理</strong><br>4.<code>Array.filter((item,index,thisArr)=&gt;{retrun xxx})</code>  </li><li>参数同上 <strong>xxx表示过滤的条件(判断语句)</strong><br>5.<code>Array.splice()</code>  </li><li>传入两个参数时进行删除，第一个参数是开始删除的索引，第二个参数是删除的元素个数</li><li>传入三个参数时进行修改，第一个参数是插入的索引，第二个参数修改的元素个数，第三个参数是修改的元素</li></ul>]]></content:encoded>
+            <category>JavaScript</category>
+            <category>问题回顾</category>
+        </item>
+        <item>
+            <title><![CDATA[箭头函数和普通函数区别]]></title>
+            <link>https://qym994.github.io/qym-js-4</link>
+            <guid>https://qym994.github.io/qym-js-4</guid>
+            <pubDate>Sun, 08 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[箭头函数和普通函数的区别]]></description>
+            <content:encoded><![CDATA[<h4 class="anchor anchorWithStickyNavbar_LWe7" id="箭头函数和普通函数的区别">箭头函数和普通函数的区别<a href="#箭头函数和普通函数的区别" class="hash-link" aria-label="箭头函数和普通函数的区别的直接链接" title="箭头函数和普通函数的区别的直接链接">​</a></h4><ol><li>箭头函数在创建时不会有'Construct'方法，没有构造能力，无proptotype属性</li><li>箭头函数没有'arguments'对象，和第一点都是不需要复用的原因</li><li>this的指向  </li></ol><ul><li>普通函数的this是动态的，是实际执行的时候确认的  <ul><li>以函数形式调用 this =&gt; window对象</li><li>以方法形式调用 this =&gt; 调用方法的对象</li><li>构造函数中 this =&gt; 新创建的对象</li></ul></li><li>箭头函数的this在创建的时候固定为外部函数的this</li><li>顺便复习一下this指向的改变方法(箭头函数无法更改)<ul><li>call 调用方式<code>fn.call(xxx)</code>传入的第一个参数会变成fn的this指向，后续的参数作为实参传入</li><li>apply 调用方式<code>fn.apply(xxx)</code>传入的第一个参数会变成fn的this指向，后续的参数使用数据作为实参传入</li><li>bind  调用方式<code>const newfn() = fn.bind(xxx)</code>传入的第一个参数会变成newfn的this指向,后续的参数会绑定给newfn的实参</li></ul></li></ul>]]></content:encoded>
+            <category>JavaScript</category>
+            <category>问题回顾</category>
+        </item>
+        <item>
+            <title><![CDATA[Esmodule和Commonjs规范]]></title>
+            <link>https://qym994.github.io/qym-js-3</link>
+            <guid>https://qym994.github.io/qym-js-3</guid>
+            <pubDate>Sat, 07 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Esmodule和Commonjs规范]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="esmodule和commonjs规范">Esmodule和Commonjs规范<a href="#esmodule和commonjs规范" class="hash-link" aria-label="Esmodule和Commonjs规范的直接链接" title="Esmodule和Commonjs规范的直接链接">​</a></h3><p>commonjs和esmodule是目前前端主要的模块化方案</p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="commonjs">Commonjs<a href="#commonjs" class="hash-link" aria-label="Commonjs的直接链接" title="Commonjs的直接链接">​</a></h4><p>commonjs也叫cjs,在node中每一个js文件都是一个单独的模块<br>
+<!-- -->这个模块中包含CommonJS的规范的核心变量: <strong>exports， module.exports, require</strong><br>
+<!-- -->exports和module.exports可以负责对模块中的内容进行导出    </p><ul><li>exports和module.exports本来指向的是同一个引用地址，但是真正导入的是module.exports   </li><li>require函数可以帮助我们导入其他模块（自定义模块，系统模块，第三方库）<br><strong>注意</strong>  commonjs加载是同步的，所以必须等到相应的模块加载完毕，才执行后续代码<br>在浏览器环境中同步请求资源可能会引起卡顿<br>加载模块的时候，每一个模块上会有一个 loaded 布尔值属性避免重复加载  </li></ul><h4 class="anchor anchorWithStickyNavbar_LWe7" id="esmodule">Esmodule<a href="#esmodule" class="hash-link" aria-label="Esmodule的直接链接" title="Esmodule的直接链接">​</a></h4><p>ES Module 使用 import导入 和 export导出</p><ul><li>默认导出的情况下可以不指定名字，引入也可以不使用"{}"并自己命名
+<strong>使用 ES Module 将会自动开启严格模式</strong></li></ul>]]></content:encoded>
+            <category>模块化</category>
+            <category>问题回顾</category>
+            <category>node.js</category>
+        </item>
+        <item>
+            <title><![CDATA[async属性和defer属性]]></title>
+            <link>https://qym994.github.io/qym-js-2</link>
+            <guid>https://qym994.github.io/qym-js-2</guid>
+            <pubDate>Mon, 02 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[script标签的async和defer属性]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="script标签的async和defer属性">script标签的async和defer属性<a href="#script标签的async和defer属性" class="hash-link" aria-label="script标签的async和defer属性的直接链接" title="script标签的async和defer属性的直接链接">​</a></h3><p>浏览器在进行解析的时候遇到script标签的外部文件会优先解析<br>
+<!-- -->由于无法确定scipt标签中脚本的大小，为了避免阻塞引入async和defer属性  </p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="async属性--更适合第三方脚本">async属性  （更适合第三方脚本）<a href="#async属性--更适合第三方脚本" class="hash-link" aria-label="async属性  （更适合第三方脚本）的直接链接" title="async属性  （更适合第三方脚本）的直接链接">​</a></h4><p>异步执行：浏览器进行html解析，遇到带有async属性的scipt标签后，浏览器立即进行下载<br>
+<!-- -->同时继续加载界面，下载完成后执行脚本（不管html是否解析完毕）<br>
+<strong>注意</strong>假如脚本修改DOM节点可能会出错</p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="defer属性">defer属性<a href="#defer属性" class="hash-link" aria-label="defer属性的直接链接" title="defer属性的直接链接">​</a></h4><p>推迟执行：浏览器进行html解析，遇到带有defer属性的scipt标签后，浏览器立即进行下载<br>
+<!-- -->同时继续加载界面，等到html解析完毕后执行脚本  </p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="兼容性">兼容性<a href="#兼容性" class="hash-link" aria-label="兼容性的直接链接" title="兼容性的直接链接">​</a></h4><p>假如浏览器无法兼容这两个属性可以选择把script标签放在页面底部</p>]]></content:encoded>
+            <category>JavaScript</category>
+            <category>问题回顾</category>
+        </item>
+        <item>
+            <title><![CDATA[正则表达式]]></title>
+            <link>https://qym994.github.io/qym-js-1</link>
+            <guid>https://qym994.github.io/qym-js-1</guid>
+            <pubDate>Sun, 01 Jan 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[正则表达式]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="正则表达式">正则表达式<a href="#正则表达式" class="hash-link" aria-label="正则表达式的直接链接" title="正则表达式的直接链接">​</a></h3><p>写项目的时候遇到了表单验证的问题，即确定用户的提交内容是否合法<br>
+<!-- -->问题在于用户名，密码以及邮箱的格式是否合规</p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="1-定义">1. 定义<a href="#1-定义" class="hash-link" aria-label="1. 定义的直接链接" title="1. 定义的直接链接">​</a></h4><blockquote><p>正则表达式是一个规则<br>
+<!-- -->通过这个规则计算机可以检查一个字符串是否符合规则  </p></blockquote><h4 class="anchor anchorWithStickyNavbar_LWe7" id="2-创建方式">2. 创建方式<a href="#2-创建方式" class="hash-link" aria-label="2. 创建方式的直接链接" title="2. 创建方式的直接链接">​</a></h4><blockquote><p>通过构造函数创建：
+<code>let reg = new RegExp("reg","model")</code><br>
+<!-- -->reg是正则本身，model是匹配模式<br>
+<!-- -->通过字面量创建：
+<code>reg = /reg/model</code><br>
+<!-- -->参数意义同上<br>
+<strong>注意</strong>：构造函数可以用变量指定正则(reg)<br>
+<!-- -->转义字符<code>\</code>在函数中会自动转义一次，如需限制字符"\"要写为<code>\\</code>  </p></blockquote><h4 class="anchor anchorWithStickyNavbar_LWe7" id="3使用">3.使用<a href="#3使用" class="hash-link" aria-label="3.使用的直接链接" title="3.使用的直接链接">​</a></h4><blockquote><ul><li>最常用的用法"匹配" ：<code>let result = reg.test(str)</code><br>str是待测项目 reg是正则表达式 result是返回的结果(布尔值)  </li><li>过滤:<code>let result = reg.exec(str)</code>提取出str中符合正则表达式的内容
+<strong>注意</strong>result的结构为<code>['a','b',index:number,input:string,groups:undefined]</code>
+a是符合匹配规则的整体,b是分组内容即"()"里的内容"可有多个b,index表示a在整个result中的序号,input表示输入的str
+groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组中用<code>&lt;&gt;</code>命名</li></ul></blockquote><h4 class="anchor anchorWithStickyNavbar_LWe7" id="4reg常用语法">4."reg"常用语法<a href="#4reg常用语法" class="hash-link" aria-label="4.&quot;reg&quot;常用语法的直接链接" title="4.&quot;reg&quot;常用语法的直接链接">​</a></h4><blockquote><ol><li><code>|</code> 表示或</li><li><code>[]</code> 表示字符集</li></ol><ul><li><code>[a-z]</code>表示小写字母a到z</li><li><code>[A-Z]</code>表示大写字母A到Z</li><li><code>[a-zA-Z]</code>表示任意字母  </li></ul><ol start="3"><li><code>[^]</code>表示字符集取反,例如<code>reg=/[^x]/</code>即除了x之外任意字符串</li><li><code>.</code>表示除了换行"\"以外的任意字符串,如需检查"."使用<code>\.</code></li><li><code>^</code>表示字符串开头</li><li><code>$</code>表示表示字符串结尾 <strong>注意</strong><code>^</code>和<code>$</code>常与其他正则组合使用,例如<code>/^x$/</code>表示只匹配x(完全匹配)</li><li>常用字符集  </li></ol><ul><li><code>/w</code>表示基本拉丁字母中的任意字母数字字符,包括下划线,即<code>/[a-zA-z0-9_]</code></li><li><code>/W</code>表示<code>/w</code>取反,即<code>/[^a-zA-z0-9_]</code></li><li><code>/d</code>表示数字,即<code>[0-9]</code></li><li><code>/D</code>表示<code>/d</code>取反,即<code>[^0-9]</code></li></ul><ol start="8"><li>量词</li></ol><ul><li><code>{m}</code>表示恰好m个只对前面的字符使用,可使用"()"进行量词分组<br>例如<code>/a{3}/</code>匹配"aaa",<code>/(ab){3}/</code>匹配"ababab"</li><li><code>{m,n}</code>表示m到n个之间</li><li><code>{m,}</code>表示至少m个</li><li><code>{+}</code>表示至少一个,即<code>{1,}</code></li><li><code>*</code>表示任意数量,即有不报错多了也可以</li><li><code>?</code>表示0或者1茨,即<code>{0,1}</code></li></ul></blockquote><h4 class="anchor anchorWithStickyNavbar_LWe7" id="5model匹配模式">5."model"匹配模式<a href="#5model匹配模式" class="hash-link" aria-label="5.&quot;model&quot;匹配模式的直接链接" title="5.&quot;model&quot;匹配模式的直接链接">​</a></h4><blockquote><ol><li><code>i</code>表示忽略大小写,例如<code>/[a-z]/i</code></li><li><code>g</code>表示全局匹配.默认正则表达式只匹配第一个符合条件的字符串,找到即终止  </li></ol></blockquote><h4 class="anchor anchorWithStickyNavbar_LWe7" id="6常用正则表达式">6.常用正则表达式<a href="#6常用正则表达式" class="hash-link" aria-label="6.常用正则表达式的直接链接" title="6.常用正则表达式的直接链接">​</a></h4><blockquote><ol><li>用户名正则，4到16位（字母，数字，下划线，减号）<br><code>let uPattern = /^[a-zA-Z0-9_-]{4,16}$/</code></li><li>//密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字<br><code>let pPattern = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).*$/</code>  </li><li>//Email正则<br><code>let ePattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/</code></li></ol></blockquote>]]></content:encoded>
+            <category>JavaScript</category>
+            <category>问题回顾</category>
         </item>
     </channel>
 </rss>

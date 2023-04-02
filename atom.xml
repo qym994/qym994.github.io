@@ -22,6 +22,94 @@
         <category label="随笔" term="随笔"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[vue3深层代理]]></title>
+        <id>https://qym994.github.io/qym-Vue-2</id>
+        <link href="https://qym994.github.io/qym-Vue-2"/>
+        <updated>2023-02-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[vue3深层代理]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vue3深层代理">vue3深层代理<a href="#vue3深层代理" class="hash-link" aria-label="vue3深层代理的直接链接" title="vue3深层代理的直接链接">​</a></h3><p>为啥发现这个问题是我在做项目时发现vant引入的Form表单失去焦点自动提交<br>
+<!-- -->原因是没有声明变量接受变量，但在setup语法糖中出现了问题：用数组接收表单数据报错<br>
+<!-- -->校验发现必须单独申明v-model也就是表单input中的每一个变量<br>
+<!-- -->错以为是reactive的代理是浅层的 </p><p>reactive()返回的是一个对象的深层代理<br>
+<!-- -->shallowReactive()创建的是一个对象的浅层代理</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="Vue" term="Vue"/>
+        <category label="问题回顾" term="问题回顾"/>
+        <category label="vant" term="vant"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[响应式原理]]></title>
+        <id>https://qym994.github.io/qym-Vue-1</id>
+        <link href="https://qym994.github.io/qym-Vue-1"/>
+        <updated>2023-02-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[响应式原理]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="响应式原理">响应式原理<a href="#响应式原理" class="hash-link" aria-label="响应式原理的直接链接" title="响应式原理的直接链接">​</a></h3><p>只有被vue代理的对象才是响应式的，vue3中使用代理模式完成对象的响应式改造<br>
+<!-- -->响应式数据可以通过组件实例直接访问<br>
+<!-- -->普通对象在被修改时不会触发元素的重新渲染  </p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">const obj={name:qym}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">//handler用来指定代理的行为</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const handler = {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    get(target,prop,recevier){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        //target:被代理的对象 prop读取的属性 recevier代理对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        return target[prop]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        track()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    set(target,prop,recevier.value)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //前三个参数同上，value是修改的属性</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    target[prop] = value</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    trigger()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const proxy = new Proxy(obj,handler) //创建代理对象 </span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>上述代码中核心是track方法和trigger方法<br>
+<strong>track：在vue代理读取属性时会先进行追踪，记录使用该值的位置<br>trigger: 修改被代理的值后，触发所有track记录的位置进行更新</strong></p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="Vue" term="Vue"/>
+        <category label="问题回顾" term="问题回顾"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[通过 url 传递参数控制页面显示数据的两种方式]]></title>
+        <id>https://qym994.github.io/qym-node.js-1</id>
+        <link href="https://qym994.github.io/qym-node.js-1"/>
+        <updated>2023-02-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[通过 url 传递参数控制页面显示数据的两种方式]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="通过-url-传递参数控制页面显示数据的两种方式">通过 url 传递参数控制页面显示数据的两种方式<a href="#通过-url-传递参数控制页面显示数据的两种方式" class="hash-link" aria-label="通过 url 传递参数控制页面显示数据的两种方式的直接链接" title="通过 url 传递参数控制页面显示数据的两种方式的直接链接">​</a></h3><ol><li>query查询字符串传参
+get请求默认通过查询字符串传递参数，服务器端以<code>/xxx?y=z</code>的形式接受"参数</li><li>param传参
+get请求可以以param的形式传参<code>/xxx/:y</code><br><strong>query 传参配置的是path，而params传参配置的是name，query传递的参数会显示在地址栏中</strong><strong>query在路由配置不需要设置参数，而params必须设置(指定"：y")</strong></li><li>二者思想区别
+约定优于配置：query传递参数需要指定属性名，param在配置路由时已经指定完毕<br>换句话说query需要配置属性名，而param已经约定好了传参时不用再配置</li></ol>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="Node.Js" term="Node.Js"/>
+        <category label="问题回顾" term="问题回顾"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[可变参数]]></title>
+        <id>https://qym994.github.io/qym-js-7</id>
+        <link href="https://qym994.github.io/qym-js-7"/>
+        <updated>2023-01-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[arguments]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="arguments">arguments<a href="#arguments" class="hash-link" aria-label="arguments的直接链接" title="arguments的直接链接">​</a></h3><p>arguments是函数中的隐含参数，是一个伪数组对象，用来存储函数的实参<br>
+<!-- -->无论用户是否定义形参，实参都会存到arguments对象中，可以通过索引读取实参  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="可变参数">可变参数<a href="#可变参数" class="hash-link" aria-label="可变参数的直接链接" title="可变参数的直接链接">​</a></h3><p>可变参数<code>...args</code>在定义函数时将参数指定为可变参数<br>
+<!-- -->可变参数<code>args</code>是一个数组可以使用数组的方法，可以命名，也可以配合其他参数</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="JavaScript" term="JavaScript"/>
+        <category label="问题回顾" term="问题回顾"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[事件传播]]></title>
+        <id>https://qym994.github.io/qym-js-6</id>
+        <link href="https://qym994.github.io/qym-js-6"/>
+        <updated>2023-01-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[事件对象event]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="事件对象event">事件对象event<a href="#事件对象event" class="hash-link" aria-label="事件对象event的直接链接" title="事件对象event的直接链接">​</a></h3><p>事件对象是浏览器在事件触发时创建的对象，其中封装了事件相关的各种信息<br>
+<!-- -->在事件的回调函数中定义一个形参接受事件对象，例如：<br>
+<code>const box.onmousemove = function(event){this/event.target}</code>    </p><ul><li>在事件的响应函数中<code>event.target</code>表示触发事件的对象</li><li><code>this</code>表示绑定事件的对象  </li><li><code>event.stopPropagation()</code> 取消事件传导  </li><li><code>event.preventDefault</code>取消默认行为，例如取消表单提交，超链接跳转</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="事件的传播机制">事件的传播机制<a href="#事件的传播机制" class="hash-link" aria-label="事件的传播机制的直接链接" title="事件的传播机制的直接链接">​</a></h3><p>DOM中事件传播分为三个阶段：1.捕获阶段 2.目标阶段 3.冒泡阶段 </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="事件的冒泡bubble">事件的冒泡(bubble)<a href="#事件的冒泡bubble" class="hash-link" aria-label="事件的冒泡(bubble)的直接链接" title="事件的冒泡(bubble)的直接链接">​</a></h3><p>事件的冒泡就是指事件的向上传导</p><ul><li>当元素上的事件触发时，其祖先元素的相同事件也会触发 后代触发=&gt;父类触发=&gt;祖先触发  </li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="事件的委派">事件的委派<a href="#事件的委派" class="hash-link" aria-label="事件的委派的直接链接" title="事件的委派的直接链接">​</a></h3><p>本该绑定给多个元素的事件，统一绑定给document，由于事件的冒泡，所有的document中的元素都会触发事件
+这样可以降低代码复杂度维护，利用<code>event.target</code>做触发判断就可以了<br>
+<!-- -->给 父元素注册事件 ，当我们触发子元素的时候，会冒泡到父元素身上，从而触发父元素的事件</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="事件的捕获">事件的捕获<a href="#事件的捕获" class="hash-link" aria-label="事件的捕获的直接链接" title="事件的捕获的直接链接">​</a></h3><p>事件由外到内的传播，事件触发后会从当前元素最大的祖先元素开始向当前元素进行事件捕获
+如果希望在捕获阶段触发事件将<code>addEventListener</code>的第三个参数设置为true</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="JavaScript" term="JavaScript"/>
+        <category label="问题回顾" term="问题回顾"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[常用的数组方法]]></title>
         <id>https://qym994.github.io/qym-js-5</id>
         <link href="https://qym994.github.io/qym-js-5"/>

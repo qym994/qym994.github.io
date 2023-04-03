@@ -22,15 +22,101 @@
         <category label="随笔" term="随笔"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[v-for的key问题]]></title>
+        <id>https://qym994.github.io/qym-vue-6</id>
+        <link href="https://qym994.github.io/qym-vue-6"/>
+        <updated>2023-03-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[v-for的key问题]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="v-for的key问题">v-for的key问题<a href="#v-for的key问题" class="hash-link" aria-label="v-for的key问题的直接链接" title="v-for的key问题的直接链接">​</a></h3><p>使用v-for遍历时，v-for遍历时旧的结构和新的结构时按照顺序对比的<br>
+<!-- -->在更新节点时，会比较新旧节点，由变化才会修改(diff算法)<br>
+<!-- -->为元素指定一个唯一的key后就按照key去比较而不是顺序</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="Vue" term="Vue"/>
+        <category label="问题回顾" term="问题回顾"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[async属性和defer属性]]></title>
+        <id>https://qym994.github.io/qym-js-7</id>
+        <link href="https://qym994.github.io/qym-js-7"/>
+        <updated>2023-03-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[script标签的async和defer属性]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="script标签的async和defer属性">script标签的async和defer属性<a href="#script标签的async和defer属性" class="hash-link" aria-label="script标签的async和defer属性的直接链接" title="script标签的async和defer属性的直接链接">​</a></h3><p>浏览器在进行解析的时候遇到script标签的外部文件会优先解析<br>
+<!-- -->由于无法确定scipt标签中脚本的大小，为了避免阻塞引入async和defer属性  </p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="async属性--更适合第三方脚本">async属性  （更适合第三方脚本）<a href="#async属性--更适合第三方脚本" class="hash-link" aria-label="async属性  （更适合第三方脚本）的直接链接" title="async属性  （更适合第三方脚本）的直接链接">​</a></h4><p>异步执行：浏览器进行html解析，遇到带有async属性的scipt标签后，浏览器立即进行下载<br>
+<!-- -->同时继续加载界面，下载完成后执行脚本（不管html是否解析完毕）<br>
+<strong>注意</strong>假如脚本修改DOM节点可能会出错</p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="defer属性">defer属性<a href="#defer属性" class="hash-link" aria-label="defer属性的直接链接" title="defer属性的直接链接">​</a></h4><p>推迟执行：浏览器进行html解析，遇到带有defer属性的scipt标签后，浏览器立即进行下载<br>
+<!-- -->同时继续加载界面，等到html解析完毕后执行脚本  </p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="兼容性">兼容性<a href="#兼容性" class="hash-link" aria-label="兼容性的直接链接" title="兼容性的直接链接">​</a></h4><p>假如浏览器无法兼容这两个属性可以选择把script标签放在页面底部</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="JavaScript" term="JavaScript"/>
+        <category label="问题回顾" term="问题回顾"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[粘性定位失效的问题]]></title>
+        <id>https://qym994.github.io/qym-vue-5</id>
+        <link href="https://qym994.github.io/qym-vue-5"/>
+        <updated>2023-03-07T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[粘滞定位失效的问题]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="粘滞定位失效的问题">粘滞定位失效的问题<a href="#粘滞定位失效的问题" class="hash-link" aria-label="粘滞定位失效的问题的直接链接" title="粘滞定位失效的问题的直接链接">​</a></h3><p>写项目时发现batterscroll里的粘滞定位失效了
+batterscroll使用时需设置父元素overflow：hidden影响了粘性定位</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="粘性定位的原理">粘性定位的原理<a href="#粘性定位的原理" class="hash-link" aria-label="粘性定位的原理的直接链接" title="粘性定位的原理的直接链接">​</a></h3><p>Sticky（当它表现为 fixed 定位的特性时）会根据最近的滚动容器（nearest scrollport）自动计算偏移量。
+其中有一个非常重要的概念就是 nearest scrollport，它表示 sticky 元素在即将消失前会相对它最近的 scrollport 去做定位。
+须指定top, right, bottom 或 left 四个阈值其中之一（且达到设定的阈值），才可使粘性定位生效。否则其行为与相对定位相同；</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="粘性定位失效的情况">粘性定位失效的情况<a href="#粘性定位失效的情况" class="hash-link" aria-label="粘性定位失效的情况的直接链接" title="粘性定位失效的情况的直接链接">​</a></h3><ol><li>包裹的父容器高度与sticky元素一致</li><li>包裹的父容器设置了overflow为非visible</li><li>没有指定top, right, bottom 或 left</li></ol>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="Vue" term="Vue"/>
+        <category label="问题回顾" term="问题回顾"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[箭头函数和普通函数区别]]></title>
+        <id>https://qym994.github.io/qym-js-6</id>
+        <link href="https://qym994.github.io/qym-js-6"/>
+        <updated>2023-03-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[箭头函数和普通函数的区别]]></summary>
+        <content type="html"><![CDATA[<h4 class="anchor anchorWithStickyNavbar_LWe7" id="箭头函数和普通函数的区别">箭头函数和普通函数的区别<a href="#箭头函数和普通函数的区别" class="hash-link" aria-label="箭头函数和普通函数的区别的直接链接" title="箭头函数和普通函数的区别的直接链接">​</a></h4><ol><li>箭头函数在创建时不会有'Construct'方法，没有构造能力，无proptotype属性</li><li>箭头函数没有'arguments'对象，和第一点都是不需要复用的原因</li><li>this的指向  </li></ol><ul><li>普通函数的this是动态的，是实际执行的时候确认的  <ul><li>以函数形式调用 this =&gt; window对象</li><li>以方法形式调用 this =&gt; 调用方法的对象</li><li>构造函数中 this =&gt; 新创建的对象</li></ul></li><li>箭头函数的this在创建的时候固定为外部函数的this</li><li>顺便复习一下this指向的改变方法(箭头函数无法更改)<ul><li>call 调用方式<code>fn.call(xxx)</code>传入的第一个参数会变成fn的this指向，后续的参数作为实参传入</li><li>apply 调用方式<code>fn.apply(xxx)</code>传入的第一个参数会变成fn的this指向，后续的参数使用数据作为实参传入</li><li>bind  调用方式<code>const newfn() = fn.bind(xxx)</code>传入的第一个参数会变成newfn的this指向,后续的参数会绑定给newfn的实参</li></ul></li></ul>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="JavaScript" term="JavaScript"/>
+        <category label="问题回顾" term="问题回顾"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[vant轻提示不生效]]></title>
+        <id>https://qym994.github.io/qym-vue-4</id>
+        <link href="https://qym994.github.io/qym-vue-4"/>
+        <updated>2023-02-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[vant轻提示不生效]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vant轻提示不生效">vant轻提示不生效<a href="#vant轻提示不生效" class="hash-link" aria-label="vant轻提示不生效的直接链接" title="vant轻提示不生效的直接链接">​</a></h3><p>Vant 中有个别组件是以函数的形式提供的<br>
+<!-- -->包括 Toast，Dialog，Notify 和 ImagePreview 组件<br>
+<!-- -->在使用函数组件时，unplugin-vue-components 无法自动引入对应的样式，因此需要手动引入样式<br>
+<!-- -->引入Notify组件<code>import 'vant/es/notify/style'</code><br>
+<!-- -->引入Toast组件<code>import 'vant/es/toast/style'</code></p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="Vue" term="Vue"/>
+        <category label="问题回顾" term="问题回顾"/>
+        <category label="vant" term="vant"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[vue3深层代理]]></title>
-        <id>https://qym994.github.io/qym-Vue-2</id>
-        <link href="https://qym994.github.io/qym-Vue-2"/>
+        <id>https://qym994.github.io/qym-vue-3</id>
+        <link href="https://qym994.github.io/qym-vue-3"/>
         <updated>2023-02-12T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[vue3深层代理]]></summary>
         <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vue3深层代理">vue3深层代理<a href="#vue3深层代理" class="hash-link" aria-label="vue3深层代理的直接链接" title="vue3深层代理的直接链接">​</a></h3><p>为啥发现这个问题是我在做项目时发现vant引入的Form表单失去焦点自动提交<br>
 <!-- -->原因是没有声明变量接受变量，但在setup语法糖中出现了问题：用数组接收表单数据报错<br>
 <!-- -->校验发现必须单独申明v-model也就是表单input中的每一个变量<br>
-<!-- -->错以为是reactive的代理是浅层的 </p><p>reactive()返回的是一个对象的深层代理<br>
+<!-- -->错以为是reactive的代理是浅层的<br>
+<!-- -->只能舍弃语法糖写法，在setup()函数中声明，最后return{...toRefs(userinfo)}
+reactive()返回的是一个对象的深层代理<br>
 <!-- -->shallowReactive()创建的是一个对象的浅层代理</p>]]></content>
         <author>
             <name>qym</name>
@@ -42,8 +128,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[响应式原理]]></title>
-        <id>https://qym994.github.io/qym-Vue-1</id>
-        <link href="https://qym994.github.io/qym-Vue-1"/>
+        <id>https://qym994.github.io/qym-vue-2</id>
+        <link href="https://qym994.github.io/qym-vue-2"/>
         <updated>2023-02-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[响应式原理]]></summary>
         <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="响应式原理">响应式原理<a href="#响应式原理" class="hash-link" aria-label="响应式原理的直接链接" title="响应式原理的直接链接">​</a></h3><p>只有被vue代理的对象才是响应式的，vue3中使用代理模式完成对象的响应式改造<br>
@@ -75,9 +161,24 @@ get请求可以以param的形式传参<code>/xxx/:y</code><br><strong>query 传�
         <category label="问题回顾" term="问题回顾"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[在外部的js文件中使用pinia store中的数据报错未挂载pinia]]></title>
+        <id>https://qym994.github.io/qym-vue-1</id>
+        <link href="https://qym994.github.io/qym-vue-1"/>
+        <updated>2023-01-28T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[在外部的js文件中使用pinia store中的数据报错未挂载pinia]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="在外部的js文件中使用pinia-store中的数据报错未挂载pinia">在外部的js文件中使用pinia store中的数据报错未挂载pinia<a href="#在外部的js文件中使用pinia-store中的数据报错未挂载pinia" class="hash-link" aria-label="在外部的js文件中使用pinia store中的数据报错未挂载pinia的直接链接" title="在外部的js文件中使用pinia store中的数据报错未挂载pinia的直接链接">​</a></h3><p>写路由时需要用到store里的用户登录状态,报错为：</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">`Error: [🍍]: getActivePinia was called with no active Pinia. Did you forget to install pinia?  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const pinia = createPinia()  </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">app.use(pinia)`</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>解决方法创建store时，导出pinia实例 </p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">import { createPinia } from 'pinia';</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const pinia = createPinia()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">export default pinia</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>在使用时传递pinia实例  </p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">import pinia from "../store/user"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">import { useUserStore } from "../store/user";</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const store = useUserStore(pinia)</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="Vue" term="Vue"/>
+        <category label="问题回顾" term="问题回顾"/>
+        <category label="pinia" term="pinia"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[可变参数]]></title>
-        <id>https://qym994.github.io/qym-js-7</id>
-        <link href="https://qym994.github.io/qym-js-7"/>
+        <id>https://qym994.github.io/qym-js-5</id>
+        <link href="https://qym994.github.io/qym-js-5"/>
         <updated>2023-01-21T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[arguments]]></summary>
         <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="arguments">arguments<a href="#arguments" class="hash-link" aria-label="arguments的直接链接" title="arguments的直接链接">​</a></h3><p>arguments是函数中的隐含参数，是一个伪数组对象，用来存储函数的实参<br>
@@ -92,8 +193,8 @@ get请求可以以param的形式传参<code>/xxx/:y</code><br><strong>query 传�
     </entry>
     <entry>
         <title type="html"><![CDATA[事件传播]]></title>
-        <id>https://qym994.github.io/qym-js-6</id>
-        <link href="https://qym994.github.io/qym-js-6"/>
+        <id>https://qym994.github.io/qym-js-4</id>
+        <link href="https://qym994.github.io/qym-js-4"/>
         <updated>2023-01-15T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[事件对象event]]></summary>
         <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="事件对象event">事件对象event<a href="#事件对象event" class="hash-link" aria-label="事件对象event的直接链接" title="事件对象event的直接链接">​</a></h3><p>事件对象是浏览器在事件触发时创建的对象，其中封装了事件相关的各种信息<br>
@@ -111,8 +212,8 @@ get请求可以以param的形式传参<code>/xxx/:y</code><br><strong>query 传�
     </entry>
     <entry>
         <title type="html"><![CDATA[常用的数组方法]]></title>
-        <id>https://qym994.github.io/qym-js-5</id>
-        <link href="https://qym994.github.io/qym-js-5"/>
+        <id>https://qym994.github.io/qym-js-3</id>
+        <link href="https://qym994.github.io/qym-js-3"/>
         <updated>2023-01-11T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[常用的数组方法]]></summary>
         <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="常用的数组方法">常用的数组方法<a href="#常用的数组方法" class="hash-link" aria-label="常用的数组方法的直接链接" title="常用的数组方法的直接链接">​</a></h3><ol><li><code>Array.push()</code>将传入的参数追加到原数组的末尾，push方法可传多个参数和单个参数  </li></ol><ul><li><strong>如果传入另一个数组将不会拆分，会作为整体即一个子元素传入(可用...展开数组)</strong></li></ul><ol start="2"><li><code>Array.forEach((item,index,thisArr)=&gt;{})</code></li></ol><ul><li>item当前遍历到的元素，index遍历到的元素索引，thisArr表示当前数组
@@ -125,23 +226,9 @@ get请求可以以param的形式传参<code>/xxx/:y</code><br><strong>query 传�
         <category label="问题回顾" term="问题回顾"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[箭头函数和普通函数区别]]></title>
-        <id>https://qym994.github.io/qym-js-4</id>
-        <link href="https://qym994.github.io/qym-js-4"/>
-        <updated>2023-01-08T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[箭头函数和普通函数的区别]]></summary>
-        <content type="html"><![CDATA[<h4 class="anchor anchorWithStickyNavbar_LWe7" id="箭头函数和普通函数的区别">箭头函数和普通函数的区别<a href="#箭头函数和普通函数的区别" class="hash-link" aria-label="箭头函数和普通函数的区别的直接链接" title="箭头函数和普通函数的区别的直接链接">​</a></h4><ol><li>箭头函数在创建时不会有'Construct'方法，没有构造能力，无proptotype属性</li><li>箭头函数没有'arguments'对象，和第一点都是不需要复用的原因</li><li>this的指向  </li></ol><ul><li>普通函数的this是动态的，是实际执行的时候确认的  <ul><li>以函数形式调用 this =&gt; window对象</li><li>以方法形式调用 this =&gt; 调用方法的对象</li><li>构造函数中 this =&gt; 新创建的对象</li></ul></li><li>箭头函数的this在创建的时候固定为外部函数的this</li><li>顺便复习一下this指向的改变方法(箭头函数无法更改)<ul><li>call 调用方式<code>fn.call(xxx)</code>传入的第一个参数会变成fn的this指向，后续的参数作为实参传入</li><li>apply 调用方式<code>fn.apply(xxx)</code>传入的第一个参数会变成fn的this指向，后续的参数使用数据作为实参传入</li><li>bind  调用方式<code>const newfn() = fn.bind(xxx)</code>传入的第一个参数会变成newfn的this指向,后续的参数会绑定给newfn的实参</li></ul></li></ul>]]></content>
-        <author>
-            <name>qym</name>
-            <uri>https://github.com/qym994</uri>
-        </author>
-        <category label="JavaScript" term="JavaScript"/>
-        <category label="问题回顾" term="问题回顾"/>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[Esmodule和Commonjs规范]]></title>
-        <id>https://qym994.github.io/qym-js-3</id>
-        <link href="https://qym994.github.io/qym-js-3"/>
+        <id>https://qym994.github.io/qym-js-2</id>
+        <link href="https://qym994.github.io/qym-js-2"/>
         <updated>2023-01-07T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Esmodule和Commonjs规范]]></summary>
         <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="esmodule和commonjs规范">Esmodule和Commonjs规范<a href="#esmodule和commonjs规范" class="hash-link" aria-label="Esmodule和Commonjs规范的直接链接" title="Esmodule和Commonjs规范的直接链接">​</a></h3><p>commonjs和esmodule是目前前端主要的模块化方案</p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="commonjs">Commonjs<a href="#commonjs" class="hash-link" aria-label="Commonjs的直接链接" title="Commonjs的直接链接">​</a></h4><p>commonjs也叫cjs,在node中每一个js文件都是一个单独的模块<br>
@@ -155,24 +242,6 @@ get请求可以以param的形式传参<code>/xxx/:y</code><br><strong>query 传�
         <category label="模块化" term="模块化"/>
         <category label="问题回顾" term="问题回顾"/>
         <category label="node.js" term="node.js"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[async属性和defer属性]]></title>
-        <id>https://qym994.github.io/qym-js-2</id>
-        <link href="https://qym994.github.io/qym-js-2"/>
-        <updated>2023-01-02T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[script标签的async和defer属性]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="script标签的async和defer属性">script标签的async和defer属性<a href="#script标签的async和defer属性" class="hash-link" aria-label="script标签的async和defer属性的直接链接" title="script标签的async和defer属性的直接链接">​</a></h3><p>浏览器在进行解析的时候遇到script标签的外部文件会优先解析<br>
-<!-- -->由于无法确定scipt标签中脚本的大小，为了避免阻塞引入async和defer属性  </p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="async属性--更适合第三方脚本">async属性  （更适合第三方脚本）<a href="#async属性--更适合第三方脚本" class="hash-link" aria-label="async属性  （更适合第三方脚本）的直接链接" title="async属性  （更适合第三方脚本）的直接链接">​</a></h4><p>异步执行：浏览器进行html解析，遇到带有async属性的scipt标签后，浏览器立即进行下载<br>
-<!-- -->同时继续加载界面，下载完成后执行脚本（不管html是否解析完毕）<br>
-<strong>注意</strong>假如脚本修改DOM节点可能会出错</p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="defer属性">defer属性<a href="#defer属性" class="hash-link" aria-label="defer属性的直接链接" title="defer属性的直接链接">​</a></h4><p>推迟执行：浏览器进行html解析，遇到带有defer属性的scipt标签后，浏览器立即进行下载<br>
-<!-- -->同时继续加载界面，等到html解析完毕后执行脚本  </p><h4 class="anchor anchorWithStickyNavbar_LWe7" id="兼容性">兼容性<a href="#兼容性" class="hash-link" aria-label="兼容性的直接链接" title="兼容性的直接链接">​</a></h4><p>假如浏览器无法兼容这两个属性可以选择把script标签放在页面底部</p>]]></content>
-        <author>
-            <name>qym</name>
-            <uri>https://github.com/qym994</uri>
-        </author>
-        <category label="JavaScript" term="JavaScript"/>
-        <category label="问题回顾" term="问题回顾"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[正则表达式]]></title>

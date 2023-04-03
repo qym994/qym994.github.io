@@ -4,10 +4,20 @@
         <title>qym的个人主页 Blog</title>
         <link>https://qym994.github.io/</link>
         <description>qym的个人主页 Blog</description>
-        <lastBuildDate>Sat, 01 Apr 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 04 Apr 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh</language>
+        <item>
+            <title><![CDATA[vue中组件通信]]></title>
+            <link>https://qym994.github.io/auditon-1</link>
+            <guid>https://qym994.github.io/auditon-1</guid>
+            <pubDate>Tue, 04 Apr 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[vue中组件通信]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="vue中组件通信">vue中组件通信<a href="#vue中组件通信" class="hash-link" aria-label="vue中组件通信的直接链接" title="vue中组件通信的直接链接">​</a></h2><ol><li>父子组件通信</li></ol><ul><li>props </li><li><ul><li>子组件使用<code>const props = defineProps([x,y,z])</code>定义属性名，可以传入对象进行配置  </li></ul></li><li><ul><li>父组件中在创建子组件实例时使用子组件定义的属性名传递参数  </li></ul></li><li><ul><li><strong>父组件传递给子组件的props是只读的</strong></li></ul></li><li>属性透传</li><li><ul><li>在组件中设置属性，会自动传递给子组件的根元素，会继续传递给子元素</li></ul></li><li><ul><li>透传会发生在没有被声明为props和emit的属性上</li></ul></li><li><ul><li><strong>*自动透传只能传递给单根子组件</strong></li></ul></li><li><ul><li>模板中使用$attr手动访问透传属`性，在scipt中使用useAttrs()获取透传属性</li></ul></li><li><ul><li>在script标签中(非setup语法糖)使用<code>inheritAttrs：false</code>设置不发生自动透传  </li></ul></li><li>emits</li><li><ul><li>在子元素中使用<code>const emits = defineEmits([xxx])</code>定义事件名</li></ul></li><li><ul><li>在父元素中<code>@xxx = emits(yyy)</code>给xxx绑定yyy事件触发  </li></ul></li><li>ref</li><li><ul><li>给DOM节点添加ref属性，即起别名，通过$refs属性获取该节点</li></ul></li><li><ul><li>给组件添加ref属性，即起别名，通过$refs调用获取中的属性，方法</li></ul></li><li><ul><li>假如同时使用ref添加响应式数据需要指定同一属性名<code>const x = ref(null) </code></li></ul></li><li><ul><li><strong>vue3中ref获取节点所以必须在mounted之后才能获取到元素，因为setup执行时，template中的元素还没挂载到页面上</strong></li></ul></li><li>依赖注入</li><li><ul><li>在祖先组件中设置依赖<code>provide(name,value)</code></li></ul></li><li><ul><li>在后代组件中注入数据<code>const value = inject(name,default)</code></li></ul></li><li><ul><li>若有同名依赖取最近一层的祖先元素依赖</li></ul></li><li>状态管理工具</li><li>使用pinia或vuex等状态管理工具进行全局的数据控制</li></ul>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vue</category>
+        </item>
         <item>
             <title><![CDATA[不正经博客]]></title>
             <link>https://qym994.github.io/不正经博客1</link>

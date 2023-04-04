@@ -4,27 +4,17 @@
         <title>qym的个人主页 Blog</title>
         <link>https://qym994.github.io/</link>
         <description>qym的个人主页 Blog</description>
-        <lastBuildDate>Tue, 04 Apr 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 01 Apr 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh</language>
-        <item>
-            <title><![CDATA[vue中组件通信]]></title>
-            <link>https://qym994.github.io/auditon-1</link>
-            <guid>https://qym994.github.io/auditon-1</guid>
-            <pubDate>Tue, 04 Apr 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[vue中组件通信]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="vue中组件通信">vue中组件通信<a href="#vue中组件通信" class="hash-link" aria-label="vue中组件通信的直接链接" title="vue中组件通信的直接链接">​</a></h2><ol><li>父子组件通信</li></ol><ul><li>props </li><li><ul><li>子组件使用<code>const props = defineProps([x,y,z])</code>定义属性名，可以传入对象进行配置  </li></ul></li><li><ul><li>父组件中在创建子组件实例时使用子组件定义的属性名传递参数  </li></ul></li><li><ul><li><strong>父组件传递给子组件的props是只读的</strong></li></ul></li><li>属性透传</li><li><ul><li>在组件中设置属性，会自动传递给子组件的根元素，会继续传递给子元素</li></ul></li><li><ul><li>透传会发生在没有被声明为props和emit的属性上</li></ul></li><li><ul><li><strong>*自动透传只能传递给单根子组件</strong></li></ul></li><li><ul><li>模板中使用$attr手动访问透传属`性，在scipt中使用useAttrs()获取透传属性</li></ul></li><li><ul><li>在script标签中(非setup语法糖)使用<code>inheritAttrs：false</code>设置不发生自动透传  </li></ul></li><li>emits</li><li><ul><li>在子元素中使用<code>const emits = defineEmits([xxx])</code>定义事件名</li></ul></li><li><ul><li>在父元素中<code>@xxx = emits(yyy)</code>给xxx绑定yyy事件触发  </li></ul></li><li>ref</li><li><ul><li>给DOM节点添加ref属性，即起别名，通过$refs属性获取该节点</li></ul></li><li><ul><li>给组件添加ref属性，即起别名，通过$refs调用获取中的属性，方法</li></ul></li><li><ul><li>假如同时使用ref添加响应式数据需要指定同一属性名<code>const x = ref(null) </code></li></ul></li><li><ul><li><strong>vue3中ref获取节点所以必须在mounted之后才能获取到元素，因为setup执行时，template中的元素还没挂载到页面上</strong></li></ul></li><li>依赖注入</li><li><ul><li>在祖先组件中设置依赖<code>provide(name,value)</code></li></ul></li><li><ul><li>在后代组件中注入数据<code>const value = inject(name,default)</code></li></ul></li><li><ul><li>若有同名依赖取最近一层的祖先元素依赖</li></ul></li><li>状态管理工具</li><li>使用pinia或vuex等状态管理工具进行全局的数据控制</li></ul>]]></content:encoded>
-            <category>面试准备</category>
-            <category>vue</category>
-        </item>
         <item>
             <title><![CDATA[不正经博客]]></title>
             <link>https://qym994.github.io/不正经博客1</link>
             <guid>https://qym994.github.io/不正经博客1</guid>
             <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[不正经博客]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_LWe7" id="不正经博客">不正经博客<a href="#不正经博客" class="hash-link" aria-label="不正经博客的直接链接" title="不正经博客的直接链接">​</a></h2><p>在一个不是很正经的日子里，我写下了这篇博客</p><p>自己学习了很久的前端开发有了小的进展，这让我对未来充满了期待又有些迷茫。
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="不正经博客">不正经博客<a href="#不正经博客" class="hash-link" aria-label="不正经博客的直接链接" title="不正经博客的直接链接">​</a></h3><p>在一个不是很正经的日子里，我写下了这篇博客</p><p>自己学习了很久的前端开发有了小的进展，这让我对未来充满了期待又有些迷茫。
 这次的选择题做对了吗?</p>]]></content:encoded>
             <category>随笔</category>
         </item>
@@ -73,7 +63,7 @@ batterscroll使用时需设置父元素overflow：hidden影响了粘性定位</p
             <guid>https://qym994.github.io/qym-js-6</guid>
             <pubDate>Wed, 01 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[箭头函数和普通函数的区别]]></description>
-            <content:encoded><![CDATA[<h4 class="anchor anchorWithStickyNavbar_LWe7" id="箭头函数和普通函数的区别">箭头函数和普通函数的区别<a href="#箭头函数和普通函数的区别" class="hash-link" aria-label="箭头函数和普通函数的区别的直接链接" title="箭头函数和普通函数的区别的直接链接">​</a></h4><ol><li>箭头函数在创建时不会有'Construct'方法，没有构造能力，无proptotype属性</li><li>箭头函数没有'arguments'对象，和第一点都是不需要复用的原因</li><li>this的指向  </li></ol><ul><li>普通函数的this是动态的，是实际执行的时候确认的  <ul><li>以函数形式调用 this =&gt; window对象</li><li>以方法形式调用 this =&gt; 调用方法的对象</li><li>构造函数中 this =&gt; 新创建的对象</li></ul></li><li>箭头函数的this在创建的时候固定为外部函数的this</li><li>顺便复习一下this指向的改变方法(箭头函数无法更改)<ul><li>call 调用方式<code>fn.call(xxx)</code>传入的第一个参数会变成fn的this指向，后续的参数作为实参传入</li><li>apply 调用方式<code>fn.apply(xxx)</code>传入的第一个参数会变成fn的this指向，后续的参数使用数据作为实参传入</li><li>bind  调用方式<code>const newfn() = fn.bind(xxx)</code>传入的第一个参数会变成newfn的this指向,后续的参数会绑定给newfn的实参</li></ul></li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="箭头函数和普通函数的区别">箭头函数和普通函数的区别<a href="#箭头函数和普通函数的区别" class="hash-link" aria-label="箭头函数和普通函数的区别的直接链接" title="箭头函数和普通函数的区别的直接链接">​</a></h3><ol><li>箭头函数在创建时不会有'Construct'方法，没有构造能力，无proptotype属性</li><li>箭头函数没有'arguments'对象，和第一点都是不需要复用的原因</li><li>this的指向  </li></ol><ul><li>普通函数的this是动态的，是实际执行的时候确认的  <ul><li>以函数形式调用 this =&gt; window对象</li><li>以方法形式调用 this =&gt; 调用方法的对象</li><li>构造函数中 this =&gt; 新创建的对象</li></ul></li><li>箭头函数的this在创建的时候固定为外部函数的this</li><li>顺便复习一下this指向的改变方法(箭头函数无法更改)<ul><li>call 调用方式<code>fn.call(xxx)</code>传入的第一个参数会变成fn的this指向，后续的参数作为实参传入</li><li>apply 调用方式<code>fn.apply(xxx)</code>传入的第一个参数会变成fn的this指向，后续的参数使用数据作为实参传入</li><li>bind  调用方式<code>const newfn() = fn.bind(xxx)</code>传入的第一个参数会变成newfn的this指向,后续的参数会绑定给newfn的实参</li></ul></li></ul>]]></content:encoded>
             <category>JavaScript</category>
             <category>问题回顾</category>
         </item>
@@ -219,6 +209,92 @@ a是符合匹配规则的整体,b是分组内容即"()"里的内容"可有多个
 groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组中用<code>&lt;&gt;</code>命名</li></ul></blockquote><h4 class="anchor anchorWithStickyNavbar_LWe7" id="4reg常用语法">4."reg"常用语法<a href="#4reg常用语法" class="hash-link" aria-label="4.&quot;reg&quot;常用语法的直接链接" title="4.&quot;reg&quot;常用语法的直接链接">​</a></h4><blockquote><ol><li><code>|</code> 表示或</li><li><code>[]</code> 表示字符集</li></ol><ul><li><code>[a-z]</code>表示小写字母a到z</li><li><code>[A-Z]</code>表示大写字母A到Z</li><li><code>[a-zA-Z]</code>表示任意字母  </li></ul><ol start="3"><li><code>[^]</code>表示字符集取反,例如<code>reg=/[^x]/</code>即除了x之外任意字符串</li><li><code>.</code>表示除了换行"\"以外的任意字符串,如需检查"."使用<code>\.</code></li><li><code>^</code>表示字符串开头</li><li><code>$</code>表示表示字符串结尾 <strong>注意</strong><code>^</code>和<code>$</code>常与其他正则组合使用,例如<code>/^x$/</code>表示只匹配x(完全匹配)</li><li>常用字符集  </li></ol><ul><li><code>/w</code>表示基本拉丁字母中的任意字母数字字符,包括下划线,即<code>/[a-zA-z0-9_]</code></li><li><code>/W</code>表示<code>/w</code>取反,即<code>/[^a-zA-z0-9_]</code></li><li><code>/d</code>表示数字,即<code>[0-9]</code></li><li><code>/D</code>表示<code>/d</code>取反,即<code>[^0-9]</code></li></ul><ol start="8"><li>量词</li></ol><ul><li><code>{m}</code>表示恰好m个只对前面的字符使用,可使用"()"进行量词分组<br>例如<code>/a{3}/</code>匹配"aaa",<code>/(ab){3}/</code>匹配"ababab"</li><li><code>{m,n}</code>表示m到n个之间</li><li><code>{m,}</code>表示至少m个</li><li><code>{+}</code>表示至少一个,即<code>{1,}</code></li><li><code>*</code>表示任意数量,即有不报错多了也可以</li><li><code>?</code>表示0或者1茨,即<code>{0,1}</code></li></ul></blockquote><h4 class="anchor anchorWithStickyNavbar_LWe7" id="5model匹配模式">5."model"匹配模式<a href="#5model匹配模式" class="hash-link" aria-label="5.&quot;model&quot;匹配模式的直接链接" title="5.&quot;model&quot;匹配模式的直接链接">​</a></h4><blockquote><ol><li><code>i</code>表示忽略大小写,例如<code>/[a-z]/i</code></li><li><code>g</code>表示全局匹配.默认正则表达式只匹配第一个符合条件的字符串,找到即终止  </li></ol></blockquote><h4 class="anchor anchorWithStickyNavbar_LWe7" id="6常用正则表达式">6.常用正则表达式<a href="#6常用正则表达式" class="hash-link" aria-label="6.常用正则表达式的直接链接" title="6.常用正则表达式的直接链接">​</a></h4><blockquote><ol><li>用户名正则，4到16位（字母，数字，下划线，减号）<br><code>let uPattern = /^[a-zA-Z0-9_-]{4,16}$/</code></li><li>//密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字<br><code>let pPattern = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).*$/</code>  </li><li>//Email正则<br><code>let ePattern = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/</code></li></ol></blockquote>]]></content:encoded>
             <category>JavaScript</category>
             <category>问题回顾</category>
+        </item>
+        <item>
+            <title><![CDATA[nextTick]]></title>
+            <link>https://qym994.github.io/auditon-8</link>
+            <guid>https://qym994.github.io/auditon-8</guid>
+            <pubDate>Mon, 08 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[nextTick]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="nexttick">nextTick<a href="#nexttick" class="hash-link" aria-label="nextTick的直接链接" title="nextTick的直接链接">​</a></h3><ol><li>定义：nextTick是等待下一次DOM更新刷新的工具方法</li><li>事件循环eventlopp</li></ol><ul><li>调用栈：当一个函数被调用时，它的执行环境会作为一个栈帧(frame)插入栈顶，函数执行完毕会自动弹出栈帧</li><li><ul><li>其实可以从调用栈看出函数作用域的包含关系</li></ul></li><li>消息队列：存储将要执行的函数，触发一个事件时，不是直接把事件放到调用栈中，而是放到消息队列中排队</li><li><ul><li><strong>定时器的本质是指定时间后将函数添加到消息队列</strong></li></ul></li><li>微任务队列：</li></ul><ol><li>vue的异步更新策略：如果数据发生变化，vue不会立即更新DOM，而是开启一个队列，把组件更新函数保存在队列中，在同一事件循环中发生的数据</li></ol>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vue</category>
+        </item>
+        <item>
+            <title><![CDATA[history和hash模式]]></title>
+            <link>https://qym994.github.io/auditon-7</link>
+            <guid>https://qym994.github.io/auditon-7</guid>
+            <pubDate>Sun, 07 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[v-router有三个模式]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="v-router有三个模式">v-router有三个模式<a href="#v-router有三个模式" class="hash-link" aria-label="v-router有三个模式的直接链接" title="v-router有三个模式的直接链接">​</a></h3><p>hash模式 history模式 memory模式
+区别只在url形式 </p><ol><li>hash：<code>http://xxx.com/#/yyy</code></li></ol><ul><li>在url栏中显示已hash的形式，使用部署更简单  </li></ul><ol start="2"><li>history:<code>http://xxx.com/yyy</code></li></ol><ul><li>在url栏中更简洁美观，应用时需要配置，web服务器需要做回退处理，否则会出现刷新404的问题</li></ul>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vue</category>
+            <category>v-router</category>
+        </item>
+        <item>
+            <title><![CDATA[ref和reacitive]]></title>
+            <link>https://qym994.github.io/auditon-6</link>
+            <guid>https://qym994.github.io/auditon-6</guid>
+            <pubDate>Sat, 06 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[ref和reacitive]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ref和reacitive">ref和reacitive<a href="#ref和reacitive" class="hash-link" aria-label="ref和reacitive的直接链接" title="ref和reacitive的直接链接">​</a></h3><ol><li>ref</li></ol><ul><li>ref用来处理单值的响应式</li><li>在scipt中如需访问ref响应式数据需要加上<code>.value</code>才能正常访问  </li><li>通过内部封装一个Reflmpl类并设置get和set方法实现响应式</li></ul><ol start="2"><li>reacitive</li></ol><ul><li>reactive用来处理对象的响应式</li><li>使用展开运算符(...)展开reactive的响应式对象会使其失去响应式，可结合toRefs再展开</li><li>通过借助Proxy代理对象实现响应式</li></ul>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vue</category>
+        </item>
+        <item>
+            <title><![CDATA[双向绑定]]></title>
+            <link>https://qym994.github.io/auditon-5</link>
+            <guid>https://qym994.github.io/auditon-5</guid>
+            <pubDate>Fri, 05 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[双向绑定]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="双向绑定">双向绑定<a href="#双向绑定" class="hash-link" aria-label="双向绑定的直接链接" title="双向绑定的直接链接">​</a></h3><ol><li>定义：双向绑定就是v-model，将一个响应式数据绑定到视图<br>视图变化能改变该值，数据变化也能改变视图</li><li>v-model是一个语法糖，默认情况下相当于<code>：value</code>和<code>@input</code>通常在表单项中使用</li><li>表单单选type="checkbox"可以结合true-value和false-value  </li></ol><ul><li><code>const text = ref("是")</code></li><li><code>&lt;input type = checkbox v-model = text true-value="是" false-value = "否"/&gt;</code> </li></ul><ol start="4"><li>表单多选type="checkbox"与单选方法相同，使用一个响应式的数据接收数据</li><li>如需要选项控制其他元素的可操作性，例如：同意隐私设置登录<br>可以结合<code>:disabled</code>取反"同意选项"<br><strong>假如表达需要默认为空，则v-model绑定一个空的响应式数据即可</strong></li></ol>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vue</category>
+        </item>
+        <item>
+            <title><![CDATA[v-for/v-if]]></title>
+            <link>https://qym994.github.io/auditon-4</link>
+            <guid>https://qym994.github.io/auditon-4</guid>
+            <pubDate>Thu, 04 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[v-for和v-if]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="v-for和v-if">v-for和v-if<a href="#v-for和v-if" class="hash-link" aria-label="v-for和v-if的直接链接" title="v-for和v-if的直接链接">​</a></h3><p><strong>实际使用中不要将v-for和v-if一起使用</strong><br>
+<strong>性能消耗v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销</strong></p><ol><li>v-show</li></ol><ul><li>v-show通过css样式的display：none控制元素显隐  </li><li>当用v-show来隐藏元素时，只会在初次加载时渲染此dom节点，之后都是通用display来控制显隐，</li></ul><ol start="2"><li>v-if  </li></ol><ul><li>v-if通过直接控制虚拟DOM中的元素节点间接控制真实DOM上的节点控制元素显隐   </li><li>当用v-if来隐藏元素时，初次加载时就不用渲染此dom节点，提升页面加载速度</li></ul>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vue</category>
+        </item>
+        <item>
+            <title><![CDATA[数据持久化和本地存储]]></title>
+            <link>https://qym994.github.io/auditon-3</link>
+            <guid>https://qym994.github.io/auditon-3</guid>
+            <pubDate>Wed, 03 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[vuex中的state数据丢失]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vuex中的state数据丢失">vuex中的state数据丢失<a href="#vuex中的state数据丢失" class="hash-link" aria-label="vuex中的state数据丢失的直接链接" title="vuex中的state数据丢失的直接链接">​</a></h3><ol><li>原因：vuex存储的数据只是在页面中，相当于全局变量，页面刷新的时候vuex里的数据会重新初始化，导致数据丢失。
+因为vuex里的数据是保存在运行内存中的，当页面刷新时，页面会重新加载vue实例，vuex里面的数据就会被重新赋值</li><li>解决方法：将vuex中的数据直接保存到浏览器缓存中（sessionStorage、localStorage、cookie）</li></ol><ul><li>直接在vuex修改数据方法中将数据存储到浏览器本地存储中 </li><li>引入第三方库进行持久化存储</li></ul><h3 class="anchor anchorWithStickyNavbar_LWe7" id="pinia数据持久化">pinia数据持久化<a href="#pinia数据持久化" class="hash-link" aria-label="pinia数据持久化的直接链接" title="pinia数据持久化的直接链接">​</a></h3><ol><li>安装插件persist</li><li>在App.vue中引入并挂载</li><li>数据缓存并配置</li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="本地存储">本地存储<a href="#本地存储" class="hash-link" aria-label="本地存储的直接链接" title="本地存储的直接链接">​</a></h3><ol><li>sessionStorage会话存储<code>sessionStorage.setItem("属性名"，"属性值")</code></li><li>logcalStorage本地存储<code>localStorage.setItem("属性名","属性值")</code></li><li>会话存储和本地存储都有相同的方法setItem,getItem,removeItem,clear</li></ol>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vuex</category>
+            <category>pinia</category>
+            <category>vue</category>
+        </item>
+        <item>
+            <title><![CDATA[http状态码]]></title>
+            <link>https://qym994.github.io/auditon-2</link>
+            <guid>https://qym994.github.io/auditon-2</guid>
+            <pubDate>Tue, 02 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[http状态码]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="http状态码">http状态码<a href="#http状态码" class="hash-link" aria-label="http状态码的直接链接" title="http状态码的直接链接">​</a></h3><ol><li>定义：http状态码是服务器返回客户端的响应状态码</li><li>具体分类</li></ol><ul><li>1xx：表示通知信息，如请求收到了或正在处理</li><li><ul><li>100：Continue 客户端继续其请求</li></ul></li><li><ul><li>101：Switching Protocols 服务器切换更高级协议</li></ul></li><li>2xx：表示成功，如接受或知道了  </li><li><ul><li>200：OK 请求成功</li></ul></li><li><ul><li>201：Created 成功请求并创建资源</li></ul></li><li><ul><li>202 ：Accepted 已接受请求但还未处理</li></ul></li><li>3xx：表示重定向：如要完成请求还需要进一步行动</li><li><ul><li>301：Moved Permanently 请求的资源已经被永久移动新URI，浏览器会重新定向到新URI</li></ul></li><li><ul><li>302：Found 请求的资源临时移动，不重定向URI</li></ul></li><li>4xx：表示客户端错误，如请求中有错误的语法或不能完成</li><li><ul><li>400：Bad Request 客户端请求的语法错误</li></ul></li><li><ul><li>401：Unauthorized 客户端身份验证未通过j</li></ul></li><li><ul><li>403：Forbidden 服务器拒绝执行请求</li></ul></li><li><ul><li>404：Not Found 服务器无法找到请求的资源</li></ul></li><li>5XX：表示服务器端错误，如服务器失效</li><li><ul><li>502：Bad Gateway 错误网关</li></ul></li></ul>]]></content:encoded>
+            <category>面试准备</category>
+            <category>计算机网络</category>
+        </item>
+        <item>
+            <title><![CDATA[vue中组件通信]]></title>
+            <link>https://qym994.github.io/auditon-1</link>
+            <guid>https://qym994.github.io/auditon-1</guid>
+            <pubDate>Mon, 01 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[vue中组件通信]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vue中组件通信">vue中组件通信<a href="#vue中组件通信" class="hash-link" aria-label="vue中组件通信的直接链接" title="vue中组件通信的直接链接">​</a></h3><ol><li>父子组件通信</li></ol><ul><li>props </li><li><ul><li>子组件使用<code>const props = defineProps([x,y,z])</code>定义属性名，可以传入对象进行配置  </li></ul></li><li><ul><li>父组件中在创建子组件实例时使用子组件定义的属性名传递参数  </li></ul></li><li><ul><li><strong>父组件传递给子组件的props是只读的</strong></li></ul></li><li>属性透传</li><li><ul><li>在组件中设置属性，会自动传递给子组件的根元素，会继续传递给子元素</li></ul></li><li><ul><li>透传会发生在没有被声明为props和emit的属性上</li></ul></li><li><ul><li><strong>*自动透传只能传递给单根子组件</strong></li></ul></li><li><ul><li>模板中使用$attr手动访问透传属`性，在scipt中使用useAttrs()获取透传属性</li></ul></li><li><ul><li>在script标签中(非setup语法糖)使用<code>inheritAttrs：false</code>设置不发生自动透传  </li></ul></li><li>emits</li><li><ul><li>在子元素中使用<code>const emits = defineEmits([xxx])</code>定义事件名</li></ul></li><li><ul><li>在父元素中<code>@xxx = emits(yyy)</code>给xxx绑定yyy事件触发  </li></ul></li><li>ref</li><li><ul><li>给DOM节点添加ref属性，即起别名，通过$refs属性获取该节点</li></ul></li><li><ul><li>给组件添加ref属性，即起别名，通过$refs调用获取中的属性，方法</li></ul></li><li><ul><li>假如同时使用ref添加响应式数据需要指定同一属性名<code>const x = ref(null) </code></li></ul></li><li><ul><li><strong>vue3中ref获取节点所以必须在mounted之后才能获取到元素，因为setup执行时，template中的元素还没挂载到页面上</strong></li></ul></li><li>依赖注入</li><li><ul><li>在祖先组件中设置依赖<code>provide(name,value)</code></li></ul></li><li><ul><li>在后代组件中注入数据<code>const value = inject(name,default)</code></li></ul></li><li><ul><li>若有同名依赖取最近一层的祖先元素依赖</li></ul></li><li>状态管理工具</li><li>使用pinia或vuex等状态管理工具进行全局的数据控制</li></ul>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vue</category>
         </item>
     </channel>
 </rss>

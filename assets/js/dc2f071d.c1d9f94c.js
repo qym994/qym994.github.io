@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[474],{948:e=>{e.exports=JSON.parse('{"label":"pinia","permalink":"/tags/pinia","allTagsPath":"/tags","count":2}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[2372],{8234:e=>{e.exports=JSON.parse('{"label":"vuex","permalink":"/tags/vuex","allTagsPath":"/tags","count":1}')}}]);

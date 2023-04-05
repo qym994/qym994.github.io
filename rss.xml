@@ -211,12 +211,42 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
             <category>问题回顾</category>
         </item>
         <item>
+            <title><![CDATA[从template到render发生了什么]]></title>
+            <link>https://qym994.github.io/auditon-11</link>
+            <guid>https://qym994.github.io/auditon-11</guid>
+            <pubDate>Thu, 11 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[从template到render发生了什么]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="从template到render发生了什么">从template到render发生了什么<a href="#从template到render发生了什么" class="hash-link" aria-label="从template到render发生了什么的直接链接" title="从template到render发生了什么的直接链接">​</a></h3><ol><li>vue中有独特的编译器模块compiler，负责将用户编写的template转化为渲染函数</li><li>这个编译过程能使程序员用HTML编写视图，并且享有编译期优化(patchflag)</li><li>在vue中编译器先对template进行解析，这一步成为parse，最后得到一个js对象即抽象语法树AST(类似于虚拟DOM描述视图)，然后对AST进行深加工的转换但不会产生新的东西，称为transform，最终将深加工后的AST生成渲染函数</li></ol>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vue</category>
+        </item>
+        <item>
+            <title><![CDATA[diff算法]]></title>
+            <link>https://qym994.github.io/auditon-10</link>
+            <guid>https://qym994.github.io/auditon-10</guid>
+            <pubDate>Wed, 10 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[diff算法]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="diff算法">diff算法<a href="#diff算法" class="hash-link" aria-label="diff算法的直接链接" title="diff算法的直接链接">​</a></h3><ol><li>diff算法在vue中被称为patching算法，虚拟DOM转换为真实DOM时就需要patch转换，在响应式数据发生变化后引起组件的重新渲染，此时会生成新的vdom，执行patch函数传入新旧两次的虚拟DOM比较变化的地方，转换为最小量的真实DOM操作，高效的更新视图</li><li>patch函数是一个递归过程，遵循深度优先，同层比较的策略<ol><li>首先判断两个根节点是否为相同类型节点(通过key或节点类型)，不同则删除并重新创建</li><li>若双方都是文本类型直接更新文本内容</li><li>若双方都是元素节点则递归更新子元素，同时更新元素属性</li></ol></li><li>编译期优化patchflag</li></ol>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vue</category>
+        </item>
+        <item>
+            <title><![CDATA[虚拟DOM]]></title>
+            <link>https://qym994.github.io/auditon-9</link>
+            <guid>https://qym994.github.io/auditon-9</guid>
+            <pubDate>Tue, 09 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[虚拟DOM]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="虚拟dom">虚拟DOM<a href="#虚拟dom" class="hash-link" aria-label="虚拟DOM的直接链接" title="虚拟DOM的直接链接">​</a></h3><ol><li>定义：虚拟DOM(vdom)就是虚拟的DOM对象，通过不同的属性描述一个视图结构，较之与真实DOM，虚拟DOM只描述了最核心的部分，更新DOM变得更轻量。</li><li>好处：</li></ol><ul><li>通过将真实节点抽象成VNode，<strong>减少了直接操作的DOM的次数</strong>，从而提高程序性能，比如在diff，clone等操作时，由于真实元素包括了其他内容，如果能转为操作一个虚拟js对象会简单很多。频繁操作DOM容易引起页面的重绘和回流</li><li>方便跨平台</li></ul><ol start="3"><li>生成方式:</li></ol><ul><li>写vue组件后模板template会被compiler编译成渲染函数，返回的对象就是虚拟DOM，再patch转为真实DOM生效</li><li>响应式数据发生变化后会引起组件的重新渲染，此时会生成新的vdom，和之前的渲染结果diff再渲染，转换为最小量的真实DOM操作，高效的更新视图</li></ul>]]></content:encoded>
+            <category>面试准备</category>
+            <category>vue</category>
+        </item>
+        <item>
             <title><![CDATA[nextTick]]></title>
             <link>https://qym994.github.io/auditon-8</link>
             <guid>https://qym994.github.io/auditon-8</guid>
             <pubDate>Mon, 08 Jan 1900 00:00:00 GMT</pubDate>
             <description><![CDATA[nextTick]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="nexttick">nextTick<a href="#nexttick" class="hash-link" aria-label="nextTick的直接链接" title="nextTick的直接链接">​</a></h3><ol><li>定义：nextTick是等待下一次DOM更新刷新的工具方法</li><li>事件循环eventlopp</li></ol><ul><li>调用栈：当一个函数被调用时，它的执行环境会作为一个栈帧(frame)插入栈顶，函数执行完毕会自动弹出栈帧</li><li><ul><li>其实可以从调用栈看出函数作用域的包含关系</li></ul></li><li>消息队列：存储将要执行的函数，触发一个事件时，不是直接把事件放到调用栈中，而是放到消息队列中排队</li><li><ul><li><strong>定时器的本质是指定时间后将函数添加到消息队列</strong></li></ul></li><li>微任务队列：</li></ul><ol><li>vue的异步更新策略：如果数据发生变化，vue不会立即更新DOM，而是开启一个队列，把组件更新函数保存在队列中，在同一事件循环中发生的数据</li></ol>]]></content:encoded>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="nexttick">nextTick<a href="#nexttick" class="hash-link" aria-label="nextTick的直接链接" title="nextTick的直接链接">​</a></h3><ol><li>定义：nextTick是等待下一次DOM更新刷新的工具方法</li><li>事件循环eventloop</li></ol><ul><li>调用栈：当一个函数被调用时，它的执行环境会作为一个栈帧(frame)插入栈顶，函数执行完毕会自动弹出栈帧</li><li><ul><li>其实可以从调用栈看出函数作用域的包含关系</li></ul></li><li>任务队列：存储将要执行的函数，触发一个事件时，不是直接把事件放到调用栈中，而是放到消息队列中排队</li><li><table><thead><tr><th>宏任务</th><th>浏览器</th><th>Nodejs</th></tr></thead><tbody><tr><td>setTimeout</td><td>√</td><td>×</td></tr><tr><td>setInterval</td><td>√</td><td>√</td></tr><tr><td>I/O</td><td>√</td><td>√</td></tr><tr><td>requestAnimationFrame</td><td>√</td><td>×</td></tr><tr><td>UIrendering</td><td>√</td><td>×</td></tr><tr><td>setImmediate</td><td>×</td><td>√</td></tr></tbody></table></li><li><table><thead><tr><th>微任务</th><th>浏览器</th><th>Nodejs</th></tr></thead><tbody><tr><td>Propmise.then/catch/finally</td><td>√</td><td>√</td></tr><tr><td>queueMicorotask</td><td>√</td><td>√</td></tr><tr><td>MutationObserve</td><td>√</td><td>×</td></tr><tr><td>process.nextTick</td><td>×</td><td>√</td></tr></tbody></table></li><li>整体的script(作为第一个宏任务)开始执行的时候，会把所有代码分为两部分：“同步任务”、“异步任务”<br>同步任务会直接进入主线程依次执行<br>异步任务会再分为宏任务(进入宏任务队列) 和 微任务(进入微任务队列)<br>当主线程内的任务执行完毕（主线程为空时），会检查微任务的任务队列，如果有任务，就进入主线程全部执行，如果没有就从宏任务队列读取下一个宏任务执行<br>每执行完一个宏任务就清空一次微任务队列，此过程会不断重复，这就是Event Loop</li><li><ul><li><strong>定时器的本质是指定时间后将函数添加到消息队列</strong></li></ul></li></ul><ol start="3"><li>vue的异步更新策略：如果数据发生变化，vue不会立即更新DOM，而是开启一个队列，把组件更新函数保存在队列中，在同一事件循环中发生的数据变更会异步的批量更新，也就是说修改DOM不是实时进行的，如果想获取更新后的DOM状态就需要nextTick</li><li>使用场景：</li></ol><ul><li>在created里获取DOM</li><li>响应式数据变化后获取DOM更新后的状态</li></ul>]]></content:encoded>
             <category>面试准备</category>
             <category>vue</category>
         </item>

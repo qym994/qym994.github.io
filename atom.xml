@@ -270,6 +270,86 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
         <category label="问题回顾" term="问题回顾"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[移动端适配]]></title>
+        <id>https://qym994.github.io/auditon-15</id>
+        <link href="https://qym994.github.io/auditon-15"/>
+        <updated>1900-03-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[移动端适配]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="移动端适配">移动端适配<a href="#移动端适配" class="hash-link" aria-label="移动端适配的直接链接" title="移动端适配的直接链接">​</a></h3><ol><li>viewport适配</li></ol><ul><li>利用完美视口适配</li><li>使用插件将css像素px转为vw适配</li><li>px 转换成 vw 不一定能完全整除，因此有一定的像素差</li></ul><ol start="2"><li>媒体查询(media query):通过媒体查询为不同的屏幕大小设置样式</li></ol><ul><li>使用max-width和min-width限定样式</li><li>页面上所有的元素都得在不同的 @media 中定义一遍不同的尺寸，代价过高</li><li>如果再多一种屏幕尺寸，就得多写一个 @media 查询块</li></ul><ol start="3"><li>rem适配</li></ol><ul><li>rem是css3新增的一个相对单位。rem为相对HTML根元素的大小，默认1rem为16px</li><li>动态的计算rem就可以实现移动端适配(结合vw)</li><li>为了方便计算我们一般设置1rem=100px，我们需要设置字体大小为100px</li><li>rem/100px = 100vw/设计图尺寸</li></ul>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="css" term="css"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[css]]></title>
+        <id>https://qym994.github.io/auditon-14</id>
+        <link href="https://qym994.github.io/auditon-14"/>
+        <updated>1900-03-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[css选择器优先级]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="css选择器优先级">css选择器优先级<a href="#css选择器优先级" class="hash-link" aria-label="css选择器优先级的直接链接" title="css选择器优先级的直接链接">​</a></h3><p>!important&gt;内联样式&gt;id&gt;类/伪类/属性&gt;标签&gt;全局</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="盒模型">盒模型<a href="#盒模型" class="hash-link" aria-label="盒模型的直接链接" title="盒模型的直接链接">​</a></h3><p>元素可以看作一个盒子：由外到内是外边距margin，边框border，内边距padding，内容content几部分组成<br>
+<!-- -->可用box-sizing控制盒模型种类：默认content-box(width指的是内容区)，可改为border-box(width包括所有内容)<br>
+<!-- -->水平布局等式：margin+border+padding+content = 包含块的宽度<br>
+<!-- -->等式不满足时，会强制调整：</p><ol><li>若有一个值为auto则调整值为auto的值</li><li>若无auto，优先调整右外边距margin-right</li><li>若左右外边距为auto，则均分调整(水平居中原理)</li><li>当外边距和width同时设置为auto时，外边距为0</li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="bfc块级格式化环境">BFC块级格式化环境<a href="#bfc块级格式化环境" class="hash-link" aria-label="BFC块级格式化环境的直接链接" title="BFC块级格式化环境的直接链接">​</a></h3><ol><li>开启浮动</li><li>overflow设置为非默认值visible</li><li>display：flow-root</li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="clearfix">clearfix<a href="#clearfix" class="hash-link" aria-label="clearfix的直接链接" title="clearfix的直接链接">​</a></h3><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">.clearfix::before,.clearfix::after{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">content:"",</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">display:table,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">clear:both</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>}
+解决高度塌陷和外边距重叠</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="flex布局">flex布局<a href="#flex布局" class="hash-link" aria-label="flex布局的直接链接" title="flex布局的直接链接">​</a></h3><p>给元素设置display：flex后元素成为弹性容器，子元素变为弹性元素<br>
+<!-- -->flex-direction：更改主轴(弹性子元素排列的方向)<br>
+<!-- -->flex-wrap：设置子元素是否换行<br>
+<!-- -->justify-content:设置元素在主轴的对齐方式<br>
+<!-- -->align-item:设置元素在辅轴上的对齐方式
+align-content:设置元素辅轴方向的空白空间如何分配<br>
+<!-- -->flex:是flex-grow(弹性元素生长系数),flex-shrink(弹性元素收缩系数),flex-basis(弹性元素基础大小)  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="雪碧图精灵图">雪碧图/精灵图<a href="#雪碧图精灵图" class="hash-link" aria-label="雪碧图/精灵图的直接链接" title="雪碧图/精灵图的直接链接">​</a></h3><p>将多个小的图片放到一个大图中，使用background-position决定展示的小图片</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="css" term="css"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[http状态码]]></title>
+        <id>https://qym994.github.io/auditon-2</id>
+        <link href="https://qym994.github.io/auditon-2"/>
+        <updated>1900-02-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[http状态码]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="http状态码">http状态码<a href="#http状态码" class="hash-link" aria-label="http状态码的直接链接" title="http状态码的直接链接">​</a></h3><ol><li>定义：http状态码是服务器返回客户端的响应状态码</li><li>具体分类</li></ol><ul><li>1xx：表示通知信息，如请求收到了或正在处理</li><li><ul><li>100：Continue 客户端继续其请求</li></ul></li><li><ul><li>101：Switching Protocols 服务器切换更高级协议</li></ul></li><li>2xx：表示成功，如接受或知道了  </li><li><ul><li>200：OK 请求成功</li></ul></li><li><ul><li>201：Created 成功请求并创建资源</li></ul></li><li><ul><li>202 ：Accepted 已接受请求但还未处理</li></ul></li><li>3xx：表示重定向：如要完成请求还需要进一步行动</li><li><ul><li>301：Moved Permanently 请求的资源已经被永久移动新URI，浏览器会重新定向到新URI</li></ul></li><li><ul><li>302：Found 请求的资源临时移动，不重定向URI</li></ul></li><li>4xx：表示客户端错误，如请求中有错误的语法或不能完成</li><li><ul><li>400：Bad Request 客户端请求的语法错误</li></ul></li><li><ul><li>401：Unauthorized 客户端身份验证未通过j</li></ul></li><li><ul><li>403：Forbidden 服务器拒绝执行请求</li></ul></li><li><ul><li>404：Not Found 服务器无法找到请求的资源</li></ul></li><li>5XX：表示服务器端错误，如服务器失效</li><li><ul><li>502：Bad Gateway 错误网关</li></ul></li></ul>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="计算机网络" term="计算机网络"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[如何拓展一个vue组件]]></title>
+        <id>https://qym994.github.io/auditon-13</id>
+        <link href="https://qym994.github.io/auditon-13"/>
+        <updated>1900-01-13T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[如何拓展一个vue组件]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="如何拓展一个vue组件">如何拓展一个vue组件<a href="#如何拓展一个vue组件" class="hash-link" aria-label="如何拓展一个vue组件的直接链接" title="如何拓展一个vue组件的直接链接">​</a></h3><ol><li>slot插槽作为内容拓展</li></ol><ul><li>父组件中在标签体中使用<code>&lt;子组件&gt;插槽内容&lt;/子组件&gt;</code></li><li>子组件在模板中使用<code>&lt;slot&gt;&lt;/slot&gt;</code></li><li>命名插槽</li><li><ul><li>则再子组件里使用<code>&lt;slot name = "xxx"&gt;&lt;/slot&gt;</code></li></ul></li><li><ul><li>父组件中使用v-slot属性对应，可简写为#<code>&lt;template #xxx&gt;</code></li></ul></li></ul><ol start="2"><li>选项式API引用可复用的函数，或者直接添加逻辑</li></ol>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="vue" term="vue"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[vue生命周期]]></title>
+        <id>https://qym994.github.io/auditon-12</id>
+        <link href="https://qym994.github.io/auditon-12"/>
+        <updated>1900-01-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[vue生命周期]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vue生命周期">vue生命周期<a href="#vue生命周期" class="hash-link" aria-label="vue生命周期的直接链接" title="vue生命周期的直接链接">​</a></h3><ol><li>定义：vue从创建到销毁的过程，在某些特定阶段用户需要添加自己的代码</li><li>vue的生命周期一共分为8个阶段：创建前后，挂载前后，更新前后和卸载前后</li><li>尝试创建组件时，一个新的生命周期就开始了</li></ol><ul><li>最早发生的是setup()函数</li><li><strong>beforeCreate：通常用于插件开发的初始化任务</strong></li><li>初始化选项式API</li><li><strong>created：组件初始化完毕，可以访问各种数据和接口数据</strong></li><li>判断是否有预编译的模板，如果有则继续，如果没有则实时编译模板得到渲染函数</li><li>beforeMount</li><li>创建并插入DOM节点</li><li><strong>mounted：DOM已经创建，可以用于获取访问数据和DOM元素，子组件等</strong></li><li>vue会不断监听响应式数据，发生变化后beforeUpdate(此时view即视图还没更新，可用于获取更新前的状态)会重新渲染，然后patch</li><li>Updated：完成view即视图的更新，更新后所有状态都是最新</li><li><strong>组件不被需要后beforeUnmounted：实例销毁前被调用，可以用于定时器，订阅的取消</strong></li><li><strong>Unmounted：销毁一个实例，清理他与其他实例的连接，解绑全部指令和事件监听器</strong></li></ul>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="vue" term="vue"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[从template到render发生了什么]]></title>
         <id>https://qym994.github.io/auditon-11</id>
         <link href="https://qym994.github.io/auditon-11"/>
@@ -400,20 +480,6 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
         <category label="vuex" term="vuex"/>
         <category label="pinia" term="pinia"/>
         <category label="vue" term="vue"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[http状态码]]></title>
-        <id>https://qym994.github.io/auditon-2</id>
-        <link href="https://qym994.github.io/auditon-2"/>
-        <updated>1900-01-02T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[http状态码]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="http状态码">http状态码<a href="#http状态码" class="hash-link" aria-label="http状态码的直接链接" title="http状态码的直接链接">​</a></h3><ol><li>定义：http状态码是服务器返回客户端的响应状态码</li><li>具体分类</li></ol><ul><li>1xx：表示通知信息，如请求收到了或正在处理</li><li><ul><li>100：Continue 客户端继续其请求</li></ul></li><li><ul><li>101：Switching Protocols 服务器切换更高级协议</li></ul></li><li>2xx：表示成功，如接受或知道了  </li><li><ul><li>200：OK 请求成功</li></ul></li><li><ul><li>201：Created 成功请求并创建资源</li></ul></li><li><ul><li>202 ：Accepted 已接受请求但还未处理</li></ul></li><li>3xx：表示重定向：如要完成请求还需要进一步行动</li><li><ul><li>301：Moved Permanently 请求的资源已经被永久移动新URI，浏览器会重新定向到新URI</li></ul></li><li><ul><li>302：Found 请求的资源临时移动，不重定向URI</li></ul></li><li>4xx：表示客户端错误，如请求中有错误的语法或不能完成</li><li><ul><li>400：Bad Request 客户端请求的语法错误</li></ul></li><li><ul><li>401：Unauthorized 客户端身份验证未通过j</li></ul></li><li><ul><li>403：Forbidden 服务器拒绝执行请求</li></ul></li><li><ul><li>404：Not Found 服务器无法找到请求的资源</li></ul></li><li>5XX：表示服务器端错误，如服务器失效</li><li><ul><li>502：Bad Gateway 错误网关</li></ul></li></ul>]]></content>
-        <author>
-            <name>qym</name>
-            <uri>https://github.com/qym994</uri>
-        </author>
-        <category label="面试准备" term="面试准备"/>
-        <category label="计算机网络" term="计算机网络"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[vue中组件通信]]></title>

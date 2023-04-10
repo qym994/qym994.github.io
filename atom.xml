@@ -241,7 +241,7 @@ get请求可以以param的形式传参<code>/xxx/:y</code><br><strong>query 传�
         </author>
         <category label="模块化" term="模块化"/>
         <category label="问题回顾" term="问题回顾"/>
-        <category label="node.js" term="node.js"/>
+        <category label="Node.js" term="Node.js"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[正则表达式]]></title>
@@ -270,6 +270,107 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
         <category label="问题回顾" term="问题回顾"/>
     </entry>
     <entry>
+        <title type="html"><![CDATA[闭包]]></title>
+        <id>https://qym994.github.io/auditon-20</id>
+        <link href="https://qym994.github.io/auditon-20"/>
+        <updated>1900-05-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[词法作用域]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="词法作用域">词法作用域<a href="#词法作用域" class="hash-link" aria-label="词法作用域的直接链接" title="词法作用域的直接链接">​</a></h3><p>函数的作用域在创建时已经确定，与调用位置无关</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="闭包模板">闭包模板？<a href="#闭包模板" class="hash-link" aria-label="闭包模板？的直接链接" title="闭包模板？的直接链接">​</a></h3><p>  function outer(){
+let count = 0
+return function inner(){
+count++
+}
+}</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="闭包的生命周期">闭包的生命周期<a href="#闭包的生命周期" class="hash-link" aria-label="闭包的生命周期的直接链接" title="闭包的生命周期的直接链接">​</a></h3><ol><li>闭包在外部函数时调用，外部函数每次调用都会产生一个全新的闭包</li><li>在内部函数丢失时销毁(垃圾回收)</li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="闭包注意事项">闭包注意事项<a href="#闭包注意事项" class="hash-link" aria-label="闭包注意事项的直接链接" title="闭包注意事项的直接链接">​</a></h3><p>闭包主要用来隐藏一些不想被外部访问的内容，意味着需要一定的内存空间<br>
+<!-- -->相较于类来说，闭包比较浪费内存空间(类可以使用原型而闭包不能)</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="Javascript" term="Javascript"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[jwt]]></title>
+        <id>https://qym994.github.io/auditon-19</id>
+        <link href="https://qym994.github.io/auditon-19"/>
+        <updated>1900-04-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[jsonwebtoken]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="jsonwebtoken">jsonwebtoken<a href="#jsonwebtoken" class="hash-link" aria-label="jsonwebtoken的直接链接" title="jsonwebtoken的直接链接">​</a></h3><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">const jwt = require("jsonwebtoken")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const token = jwt.sign(</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //传入三个参数：1.负载 2.加密密钥 3.配置对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    配置对象中：expiresIn属性设置过期时间</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">//服务器收到客户端的token后</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">try{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const decodeData = jwt.verify(token,"加密密匙")}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">catch(err){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="Nodejs" term="Nodejs"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CORS(跨域资源共享)]]></title>
+        <id>https://qym994.github.io/auditon-18</id>
+        <link href="https://qym994.github.io/auditon-18"/>
+        <updated>1900-04-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[CORS]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cors">CORS<a href="#cors" class="hash-link" aria-label="CORS的直接链接" title="CORS的直接链接">​</a></h3><p>跨域请求：如果两个网站的完整域名不相同<br>
+<!-- -->协议，域名，端口号都必须全部相同<br>
+<!-- -->浏览器会自动阻止数据的读取  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="解决方法">解决方法<a href="#解决方法" class="hash-link" aria-label="解决方法的直接链接" title="解决方法的直接链接">​</a></h3><p>在服务器中设置一个允许跨域的头：Access-Control-Allow-Origin<br>
+<!-- -->在路由中：<code>res.setHeader('Access-Control-Allow-Origin','允许的路径')</code><br>
+<!-- -->setHeader参数：</p><ol><li>Access-Control-Allow-Origin：设置指定值时只能设置一个  </li><li>Access-Control-Allow-Methods：允许的请求方式</li><li>Access-Control-Allow-Headers：允许传递的请求头</li></ol>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="Nodejs" term="Nodejs"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[AJAX]]></title>
+        <id>https://qym994.github.io/auditon-17</id>
+        <link href="https://qym994.github.io/auditon-17"/>
+        <updated>1900-04-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[AJAX]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ajax">AJAX<a href="#ajax" class="hash-link" aria-label="AJAX的直接链接" title="AJAX的直接链接">​</a></h3><p>A：异步 J：js A：和 X：XML AJAX：异步的js和xml<br>
+<!-- -->可选方案</p><ol><li>XMLHTTPRequest(xhr)</li></ol><ul><li>xhr写法：  <!-- -->  const xhr = new XMLHttpRequest()
+//设置请求信息
+xhr.open("GET","http://xxx")
+//发送请求
+xhr.send()
+</li></ul><ol start="2"><li>Fetch</li></ol><ul><li>fetch是xml的升级版，采用的Promise API且js原生支持<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">//终止请求</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const controller = new AbortController()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">btn.onclick = ()=&gt;{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    controller &amp;&amp; constroller.abort()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">fetch("http://xxx","{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">//配置对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">signal:controller.signal</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">method:"请求方式",</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">headers:"{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    "authorization":`Bearer ${token}`</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    "Content-Type":"application/json"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //"Content-Type":"application/x-www-from-urlencoded"表单项</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //需要在Access-Control-Allow-Headers中设置Content-Type，authorization</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    body：JSON.stringfiy("请求内容")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}"})</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">.then((res)=&gt;{})</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">.catch((err)=&gt;{})</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>可以选择在then中抛出错误给catch处理<br>用await改写时使用try-catch</li></ul><ol start="3"><li>Axios
+使用方法：<code>axios({config//配置对象})</code><br>别名：<code>axios.get(url[,config]),axios.post(url[,data,config])</code><br>和fetch的区别：</li><li>不需要设置Content-Type会自动设置</li><li>读取数据时，不需要再进行json格式转换</li><li>不再是返回响应就执行then，而是响应状态码为2xx时才执行<br>配置对象<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">axios{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    url："http://xxx"(必选项)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //指定服务器根目录</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    baseURL:http://xxx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //请求方法</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    method:"GET/..."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //请求头</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    headers：{"authorization":`Bearer ${token}`"}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //请求体</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    data：{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //处理请求数据data，需要传入一个数组，数据接收多个函数并按顺序执行</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //默认接收两个参数data和headers</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //最后一个函数必须返回字符串</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    transformRequest[function(data,headers)]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //处理响应数据data</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    transformResult[function(data,headers)]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //指定路径中的查询字符串</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    params:{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //指定超时时间</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    timeout：xxx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //终止请求</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    signal:和fetch相投相同</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></li></ol><p>}
+4. axios响应的结构</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //服务器的响应</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    data{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //响应状态码</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    status:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //响应信息</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    statusText：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //响应头且全是小写</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    headers:{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    // 请求信息</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    config:{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //原生的xhr对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    request:{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><ol start="5"><li>默认配置
+<code>axios.defaults.baseURL = ""</code><code>axios.defaults.common["Authorization"]="Bearer ${localStorage.getItem("token")}"</code>  </li><li>axios实例
+<code>const instance = axios.create()</code>作用与axios本身相同，结合默认设置使用</li><li>axios拦截器
+<code>axios.interceptors.request.use(function(config){})</code><br>请求拦截在请求发出前处理
+<code>axios.interceptors.response.use(function(config){})</code><br>在接收响应前处理</li></ol>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="Nodejs" term="Nodejs"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[REST风格的服务器]]></title>
+        <id>https://qym994.github.io/auditon-16</id>
+        <link href="https://qym994.github.io/auditon-16"/>
+        <updated>1900-04-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[传统的MVC模式服务器]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="传统的mvc模式服务器">传统的MVC模式服务器<a href="#传统的mvc模式服务器" class="hash-link" aria-label="传统的MVC模式服务器的直接链接" title="传统的MVC模式服务器的直接链接">​</a></h3><p>Model -- 数据模型<br>
+<!-- -->View -- 视图<br>
+<!-- -->Controller -- 控制器，加载复杂数据并选择视图来呈现数据<br>
+<!-- -->传统的服务器直接为客户端返回一个页面  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="存在的问题">存在的问题<a href="#存在的问题" class="hash-link" aria-label="存在的问题的直接链接" title="存在的问题的直接链接">​</a></h3><p>一个应用需要服务多个客户端(PC，移动端，web端)<br>
+<!-- -->服务器返回页面时过于繁琐<br>
+<strong>前后端分离后</strong>，服务器只提供数据，一个服务器可以为多种客户端服务<br>
+<!-- -->渲染的工作由客户端完成  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="rest风格的服务器">REST风格的服务器<a href="#rest风格的服务器" class="hash-link" aria-label="REST风格的服务器的直接链接" title="REST风格的服务器的直接链接">​</a></h3><p>REST即Representational State Transfer表示层的传输<br>
+<!-- -->特点是只返回数据，服务器与客户端之间通信常使用JSON格式<br>
+<!-- -->请求的方法：  </p><table><thead><tr><th>请求方式</th><th>请求内容</th></tr></thead><tbody><tr><td>GET</td><td>加载数据</td></tr><tr><td>POST</td><td>新建或添加数据</td></tr><tr><td>PUT</td><td>添加或修改数据</td></tr><tr><td>PATCH</td><td>修改数据</td></tr><tr><td>DELETE</td><td>删除数据</td></tr><tr><td>OPTION</td><td>由浏览器发送检查请求权限</td></tr></tbody></table><p>格式：API(接口)/Endpoint(端点)<br>
+<!-- -->例如：GET/user   DELETE/user</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="Nodejs" term="Nodejs"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[移动端适配]]></title>
         <id>https://qym994.github.io/auditon-15</id>
         <link href="https://qym994.github.io/auditon-15"/>
@@ -281,10 +382,10 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="css" term="css"/>
+        <category label="Css" term="Css"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[css]]></title>
+        <title type="html"><![CDATA[Css]]></title>
         <id>https://qym994.github.io/auditon-14</id>
         <link href="https://qym994.github.io/auditon-14"/>
         <updated>1900-03-01T00:00:00.000Z</updated>
@@ -305,7 +406,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="css" term="css"/>
+        <category label="Css" term="Css"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[http状态码]]></title>
@@ -333,7 +434,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="vue" term="vue"/>
+        <category label="Vue" term="Vue"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[vue生命周期]]></title>
@@ -347,7 +448,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="vue" term="vue"/>
+        <category label="Vue" term="Vue"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[从template到render发生了什么]]></title>
@@ -361,7 +462,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="vue" term="vue"/>
+        <category label="Vue" term="Vue"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[diff算法]]></title>
@@ -375,7 +476,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="vue" term="vue"/>
+        <category label="Vue" term="Vue"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[虚拟DOM]]></title>
@@ -433,7 +534,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="vue" term="vue"/>
+        <category label="Vue" term="Vue"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[双向绑定]]></title>
@@ -447,7 +548,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="vue" term="vue"/>
+        <category label="Vue" term="Vue"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[v-for/v-if]]></title>
@@ -462,7 +563,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="vue" term="vue"/>
+        <category label="Vue" term="Vue"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[数据持久化和本地存储]]></title>
@@ -479,7 +580,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
         <category label="面试准备" term="面试准备"/>
         <category label="vuex" term="vuex"/>
         <category label="pinia" term="pinia"/>
-        <category label="vue" term="vue"/>
+        <category label="Vue" term="Vue"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[vue中组件通信]]></title>
@@ -493,6 +594,6 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="vue" term="vue"/>
+        <category label="Vue" term="Vue"/>
     </entry>
 </feed>

@@ -186,7 +186,7 @@ get请求可以以param的形式传参<code>/xxx/:y</code><br><strong>query 传�
 <strong>使用 ES Module 将会自动开启严格模式</strong></li></ul>]]></content:encoded>
             <category>模块化</category>
             <category>问题回顾</category>
-            <category>node.js</category>
+            <category>Node.js</category>
         </item>
         <item>
             <title><![CDATA[正则表达式]]></title>
@@ -211,6 +211,87 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
             <category>问题回顾</category>
         </item>
         <item>
+            <title><![CDATA[闭包]]></title>
+            <link>https://qym994.github.io/auditon-20</link>
+            <guid>https://qym994.github.io/auditon-20</guid>
+            <pubDate>Tue, 01 May 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[词法作用域]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="词法作用域">词法作用域<a href="#词法作用域" class="hash-link" aria-label="词法作用域的直接链接" title="词法作用域的直接链接">​</a></h3><p>函数的作用域在创建时已经确定，与调用位置无关</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="闭包模板">闭包模板？<a href="#闭包模板" class="hash-link" aria-label="闭包模板？的直接链接" title="闭包模板？的直接链接">​</a></h3><p>  function outer(){
+let count = 0
+return function inner(){
+count++
+}
+}</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="闭包的生命周期">闭包的生命周期<a href="#闭包的生命周期" class="hash-link" aria-label="闭包的生命周期的直接链接" title="闭包的生命周期的直接链接">​</a></h3><ol><li>闭包在外部函数时调用，外部函数每次调用都会产生一个全新的闭包</li><li>在内部函数丢失时销毁(垃圾回收)</li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="闭包注意事项">闭包注意事项<a href="#闭包注意事项" class="hash-link" aria-label="闭包注意事项的直接链接" title="闭包注意事项的直接链接">​</a></h3><p>闭包主要用来隐藏一些不想被外部访问的内容，意味着需要一定的内存空间<br>
+<!-- -->相较于类来说，闭包比较浪费内存空间(类可以使用原型而闭包不能)</p>]]></content:encoded>
+            <category>面试准备</category>
+            <category>Javascript</category>
+        </item>
+        <item>
+            <title><![CDATA[jwt]]></title>
+            <link>https://qym994.github.io/auditon-19</link>
+            <guid>https://qym994.github.io/auditon-19</guid>
+            <pubDate>Wed, 04 Apr 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[jsonwebtoken]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="jsonwebtoken">jsonwebtoken<a href="#jsonwebtoken" class="hash-link" aria-label="jsonwebtoken的直接链接" title="jsonwebtoken的直接链接">​</a></h3><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">const jwt = require("jsonwebtoken")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const token = jwt.sign(</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //传入三个参数：1.负载 2.加密密钥 3.配置对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    配置对象中：expiresIn属性设置过期时间</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">//服务器收到客户端的token后</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">try{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const decodeData = jwt.verify(token,"加密密匙")}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">catch(err){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content:encoded>
+            <category>面试准备</category>
+            <category>Nodejs</category>
+        </item>
+        <item>
+            <title><![CDATA[CORS(跨域资源共享)]]></title>
+            <link>https://qym994.github.io/auditon-18</link>
+            <guid>https://qym994.github.io/auditon-18</guid>
+            <pubDate>Tue, 03 Apr 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[CORS]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cors">CORS<a href="#cors" class="hash-link" aria-label="CORS的直接链接" title="CORS的直接链接">​</a></h3><p>跨域请求：如果两个网站的完整域名不相同<br>
+<!-- -->协议，域名，端口号都必须全部相同<br>
+<!-- -->浏览器会自动阻止数据的读取  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="解决方法">解决方法<a href="#解决方法" class="hash-link" aria-label="解决方法的直接链接" title="解决方法的直接链接">​</a></h3><p>在服务器中设置一个允许跨域的头：Access-Control-Allow-Origin<br>
+<!-- -->在路由中：<code>res.setHeader('Access-Control-Allow-Origin','允许的路径')</code><br>
+<!-- -->setHeader参数：</p><ol><li>Access-Control-Allow-Origin：设置指定值时只能设置一个  </li><li>Access-Control-Allow-Methods：允许的请求方式</li><li>Access-Control-Allow-Headers：允许传递的请求头</li></ol>]]></content:encoded>
+            <category>面试准备</category>
+            <category>Nodejs</category>
+        </item>
+        <item>
+            <title><![CDATA[AJAX]]></title>
+            <link>https://qym994.github.io/auditon-17</link>
+            <guid>https://qym994.github.io/auditon-17</guid>
+            <pubDate>Mon, 02 Apr 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[AJAX]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ajax">AJAX<a href="#ajax" class="hash-link" aria-label="AJAX的直接链接" title="AJAX的直接链接">​</a></h3><p>A：异步 J：js A：和 X：XML AJAX：异步的js和xml<br>
+<!-- -->可选方案</p><ol><li>XMLHTTPRequest(xhr)</li></ol><ul><li>xhr写法：  <!-- -->  const xhr = new XMLHttpRequest()
+//设置请求信息
+xhr.open("GET","http://xxx")
+//发送请求
+xhr.send()
+</li></ul><ol start="2"><li>Fetch</li></ol><ul><li>fetch是xml的升级版，采用的Promise API且js原生支持<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">//终止请求</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const controller = new AbortController()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">btn.onclick = ()=&gt;{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    controller &amp;&amp; constroller.abort()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">fetch("http://xxx","{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">//配置对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">signal:controller.signal</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">method:"请求方式",</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">headers:"{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    "authorization":`Bearer ${token}`</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    "Content-Type":"application/json"</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //"Content-Type":"application/x-www-from-urlencoded"表单项</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //需要在Access-Control-Allow-Headers中设置Content-Type，authorization</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    body：JSON.stringfiy("请求内容")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}"})</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">.then((res)=&gt;{})</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">.catch((err)=&gt;{})</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>可以选择在then中抛出错误给catch处理<br>用await改写时使用try-catch</li></ul><ol start="3"><li>Axios
+使用方法：<code>axios({config//配置对象})</code><br>别名：<code>axios.get(url[,config]),axios.post(url[,data,config])</code><br>和fetch的区别：</li><li>不需要设置Content-Type会自动设置</li><li>读取数据时，不需要再进行json格式转换</li><li>不再是返回响应就执行then，而是响应状态码为2xx时才执行<br>配置对象<div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">axios{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    url："http://xxx"(必选项)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //指定服务器根目录</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    baseURL:http://xxx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //请求方法</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    method:"GET/..."</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //请求头</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    headers：{"authorization":`Bearer ${token}`"}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //请求体</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    data：{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //处理请求数据data，需要传入一个数组，数据接收多个函数并按顺序执行</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //默认接收两个参数data和headers</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //最后一个函数必须返回字符串</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    transformRequest[function(data,headers)]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //处理响应数据data</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    transformResult[function(data,headers)]</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //指定路径中的查询字符串</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    params:{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //指定超时时间</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    timeout：xxx</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //终止请求</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    signal:和fetch相投相同</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div></li></ol><p>}
+4. axios响应的结构</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //服务器的响应</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    data{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //响应状态码</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    status:</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //响应信息</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    statusText：</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //响应头且全是小写</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    headers:{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    // 请求信息</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    config:{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //原生的xhr对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    request:{}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><ol start="5"><li>默认配置
+<code>axios.defaults.baseURL = ""</code><code>axios.defaults.common["Authorization"]="Bearer ${localStorage.getItem("token")}"</code>  </li><li>axios实例
+<code>const instance = axios.create()</code>作用与axios本身相同，结合默认设置使用</li><li>axios拦截器
+<code>axios.interceptors.request.use(function(config){})</code><br>请求拦截在请求发出前处理
+<code>axios.interceptors.response.use(function(config){})</code><br>在接收响应前处理</li></ol>]]></content:encoded>
+            <category>面试准备</category>
+            <category>Nodejs</category>
+        </item>
+        <item>
+            <title><![CDATA[REST风格的服务器]]></title>
+            <link>https://qym994.github.io/auditon-16</link>
+            <guid>https://qym994.github.io/auditon-16</guid>
+            <pubDate>Sun, 01 Apr 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[传统的MVC模式服务器]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="传统的mvc模式服务器">传统的MVC模式服务器<a href="#传统的mvc模式服务器" class="hash-link" aria-label="传统的MVC模式服务器的直接链接" title="传统的MVC模式服务器的直接链接">​</a></h3><p>Model -- 数据模型<br>
+<!-- -->View -- 视图<br>
+<!-- -->Controller -- 控制器，加载复杂数据并选择视图来呈现数据<br>
+<!-- -->传统的服务器直接为客户端返回一个页面  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="存在的问题">存在的问题<a href="#存在的问题" class="hash-link" aria-label="存在的问题的直接链接" title="存在的问题的直接链接">​</a></h3><p>一个应用需要服务多个客户端(PC，移动端，web端)<br>
+<!-- -->服务器返回页面时过于繁琐<br>
+<strong>前后端分离后</strong>，服务器只提供数据，一个服务器可以为多种客户端服务<br>
+<!-- -->渲染的工作由客户端完成  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="rest风格的服务器">REST风格的服务器<a href="#rest风格的服务器" class="hash-link" aria-label="REST风格的服务器的直接链接" title="REST风格的服务器的直接链接">​</a></h3><p>REST即Representational State Transfer表示层的传输<br>
+<!-- -->特点是只返回数据，服务器与客户端之间通信常使用JSON格式<br>
+<!-- -->请求的方法：  </p><table><thead><tr><th>请求方式</th><th>请求内容</th></tr></thead><tbody><tr><td>GET</td><td>加载数据</td></tr><tr><td>POST</td><td>新建或添加数据</td></tr><tr><td>PUT</td><td>添加或修改数据</td></tr><tr><td>PATCH</td><td>修改数据</td></tr><tr><td>DELETE</td><td>删除数据</td></tr><tr><td>OPTION</td><td>由浏览器发送检查请求权限</td></tr></tbody></table><p>格式：API(接口)/Endpoint(端点)<br>
+<!-- -->例如：GET/user   DELETE/user</p>]]></content:encoded>
+            <category>面试准备</category>
+            <category>Nodejs</category>
+        </item>
+        <item>
             <title><![CDATA[移动端适配]]></title>
             <link>https://qym994.github.io/auditon-15</link>
             <guid>https://qym994.github.io/auditon-15</guid>
@@ -218,10 +299,10 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
             <description><![CDATA[移动端适配]]></description>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="移动端适配">移动端适配<a href="#移动端适配" class="hash-link" aria-label="移动端适配的直接链接" title="移动端适配的直接链接">​</a></h3><ol><li>viewport适配</li></ol><ul><li>利用完美视口适配</li><li>使用插件将css像素px转为vw适配</li><li>px 转换成 vw 不一定能完全整除，因此有一定的像素差</li></ul><ol start="2"><li>媒体查询(media query):通过媒体查询为不同的屏幕大小设置样式</li></ol><ul><li>使用max-width和min-width限定样式</li><li>页面上所有的元素都得在不同的 @media 中定义一遍不同的尺寸，代价过高</li><li>如果再多一种屏幕尺寸，就得多写一个 @media 查询块</li></ul><ol start="3"><li>rem适配</li></ol><ul><li>rem是css3新增的一个相对单位。rem为相对HTML根元素的大小，默认1rem为16px</li><li>动态的计算rem就可以实现移动端适配(结合vw)</li><li>为了方便计算我们一般设置1rem=100px，我们需要设置字体大小为100px</li><li>rem/100px = 100vw/设计图尺寸</li></ul>]]></content:encoded>
             <category>面试准备</category>
-            <category>css</category>
+            <category>Css</category>
         </item>
         <item>
-            <title><![CDATA[css]]></title>
+            <title><![CDATA[Css]]></title>
             <link>https://qym994.github.io/auditon-14</link>
             <guid>https://qym994.github.io/auditon-14</guid>
             <pubDate>Thu, 01 Mar 1900 00:00:00 GMT</pubDate>
@@ -238,7 +319,7 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
 align-content:设置元素辅轴方向的空白空间如何分配<br>
 <!-- -->flex:是flex-grow(弹性元素生长系数),flex-shrink(弹性元素收缩系数),flex-basis(弹性元素基础大小)  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="雪碧图精灵图">雪碧图/精灵图<a href="#雪碧图精灵图" class="hash-link" aria-label="雪碧图/精灵图的直接链接" title="雪碧图/精灵图的直接链接">​</a></h3><p>将多个小的图片放到一个大图中，使用background-position决定展示的小图片</p>]]></content:encoded>
             <category>面试准备</category>
-            <category>css</category>
+            <category>Css</category>
         </item>
         <item>
             <title><![CDATA[http状态码]]></title>
@@ -258,7 +339,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <description><![CDATA[如何拓展一个vue组件]]></description>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="如何拓展一个vue组件">如何拓展一个vue组件<a href="#如何拓展一个vue组件" class="hash-link" aria-label="如何拓展一个vue组件的直接链接" title="如何拓展一个vue组件的直接链接">​</a></h3><ol><li>slot插槽作为内容拓展</li></ol><ul><li>父组件中在标签体中使用<code>&lt;子组件&gt;插槽内容&lt;/子组件&gt;</code></li><li>子组件在模板中使用<code>&lt;slot&gt;&lt;/slot&gt;</code></li><li>命名插槽</li><li><ul><li>则再子组件里使用<code>&lt;slot name = "xxx"&gt;&lt;/slot&gt;</code></li></ul></li><li><ul><li>父组件中使用v-slot属性对应，可简写为#<code>&lt;template #xxx&gt;</code></li></ul></li></ul><ol start="2"><li>选项式API引用可复用的函数，或者直接添加逻辑</li></ol>]]></content:encoded>
             <category>面试准备</category>
-            <category>vue</category>
+            <category>Vue</category>
         </item>
         <item>
             <title><![CDATA[vue生命周期]]></title>
@@ -268,7 +349,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <description><![CDATA[vue生命周期]]></description>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vue生命周期">vue生命周期<a href="#vue生命周期" class="hash-link" aria-label="vue生命周期的直接链接" title="vue生命周期的直接链接">​</a></h3><ol><li>定义：vue从创建到销毁的过程，在某些特定阶段用户需要添加自己的代码</li><li>vue的生命周期一共分为8个阶段：创建前后，挂载前后，更新前后和卸载前后</li><li>尝试创建组件时，一个新的生命周期就开始了</li></ol><ul><li>最早发生的是setup()函数</li><li><strong>beforeCreate：通常用于插件开发的初始化任务</strong></li><li>初始化选项式API</li><li><strong>created：组件初始化完毕，可以访问各种数据和接口数据</strong></li><li>判断是否有预编译的模板，如果有则继续，如果没有则实时编译模板得到渲染函数</li><li>beforeMount</li><li>创建并插入DOM节点</li><li><strong>mounted：DOM已经创建，可以用于获取访问数据和DOM元素，子组件等</strong></li><li>vue会不断监听响应式数据，发生变化后beforeUpdate(此时view即视图还没更新，可用于获取更新前的状态)会重新渲染，然后patch</li><li>Updated：完成view即视图的更新，更新后所有状态都是最新</li><li><strong>组件不被需要后beforeUnmounted：实例销毁前被调用，可以用于定时器，订阅的取消</strong></li><li><strong>Unmounted：销毁一个实例，清理他与其他实例的连接，解绑全部指令和事件监听器</strong></li></ul>]]></content:encoded>
             <category>面试准备</category>
-            <category>vue</category>
+            <category>Vue</category>
         </item>
         <item>
             <title><![CDATA[从template到render发生了什么]]></title>
@@ -278,7 +359,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <description><![CDATA[从template到render发生了什么]]></description>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="从template到render发生了什么">从template到render发生了什么<a href="#从template到render发生了什么" class="hash-link" aria-label="从template到render发生了什么的直接链接" title="从template到render发生了什么的直接链接">​</a></h3><ol><li>vue中有独特的编译器模块compiler，负责将用户编写的template转化为渲染函数</li><li>这个编译过程能使程序员用HTML编写视图，并且享有编译期优化(patchflag)</li><li>在vue中编译器先对template进行解析，这一步成为parse，最后得到一个js对象即抽象语法树AST(类似于虚拟DOM描述视图)，然后对AST进行深加工的转换但不会产生新的东西，称为transform，最终将深加工后的AST生成渲染函数</li></ol>]]></content:encoded>
             <category>面试准备</category>
-            <category>vue</category>
+            <category>Vue</category>
         </item>
         <item>
             <title><![CDATA[diff算法]]></title>
@@ -288,7 +369,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <description><![CDATA[diff算法]]></description>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="diff算法">diff算法<a href="#diff算法" class="hash-link" aria-label="diff算法的直接链接" title="diff算法的直接链接">​</a></h3><ol><li>diff算法在vue中被称为patching算法，虚拟DOM转换为真实DOM时就需要patch转换，在响应式数据发生变化后引起组件的重新渲染，此时会生成新的vdom，执行patch函数传入新旧两次的虚拟DOM比较变化的地方，转换为最小量的真实DOM操作，高效的更新视图</li><li>patch函数是一个递归过程，遵循深度优先，同层比较的策略<ol><li>首先判断两个根节点是否为相同类型节点(通过key或节点类型)，不同则删除并重新创建</li><li>若双方都是文本类型直接更新文本内容</li><li>若双方都是元素节点则递归更新子元素，同时更新元素属性</li></ol></li><li>编译期优化patchflag</li></ol>]]></content:encoded>
             <category>面试准备</category>
-            <category>vue</category>
+            <category>Vue</category>
         </item>
         <item>
             <title><![CDATA[虚拟DOM]]></title>
@@ -330,7 +411,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <description><![CDATA[ref和reacitive]]></description>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ref和reacitive">ref和reacitive<a href="#ref和reacitive" class="hash-link" aria-label="ref和reacitive的直接链接" title="ref和reacitive的直接链接">​</a></h3><ol><li>ref</li></ol><ul><li>ref用来处理单值的响应式</li><li>在scipt中如需访问ref响应式数据需要加上<code>.value</code>才能正常访问  </li><li>通过内部封装一个Reflmpl类并设置get和set方法实现响应式</li></ul><ol start="2"><li>reacitive</li></ol><ul><li>reactive用来处理对象的响应式</li><li>使用展开运算符(...)展开reactive的响应式对象会使其失去响应式，可结合toRefs再展开</li><li>通过借助Proxy代理对象实现响应式</li></ul>]]></content:encoded>
             <category>面试准备</category>
-            <category>vue</category>
+            <category>Vue</category>
         </item>
         <item>
             <title><![CDATA[双向绑定]]></title>
@@ -340,7 +421,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <description><![CDATA[双向绑定]]></description>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="双向绑定">双向绑定<a href="#双向绑定" class="hash-link" aria-label="双向绑定的直接链接" title="双向绑定的直接链接">​</a></h3><ol><li>定义：双向绑定就是v-model，将一个响应式数据绑定到视图<br>视图变化能改变该值，数据变化也能改变视图</li><li>v-model是一个语法糖，默认情况下相当于<code>：value</code>和<code>@input</code>通常在表单项中使用</li><li>表单单选type="checkbox"可以结合true-value和false-value  </li></ol><ul><li><code>const text = ref("是")</code></li><li><code>&lt;input type = checkbox v-model = text true-value="是" false-value = "否"/&gt;</code> </li></ul><ol start="4"><li>表单多选type="checkbox"与单选方法相同，使用一个响应式的数据接收数据</li><li>如需要选项控制其他元素的可操作性，例如：同意隐私设置登录<br>可以结合<code>:disabled</code>取反"同意选项"<br><strong>假如表达需要默认为空，则v-model绑定一个空的响应式数据即可</strong></li></ol>]]></content:encoded>
             <category>面试准备</category>
-            <category>vue</category>
+            <category>Vue</category>
         </item>
         <item>
             <title><![CDATA[v-for/v-if]]></title>
@@ -351,7 +432,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="v-for和v-if">v-for和v-if<a href="#v-for和v-if" class="hash-link" aria-label="v-for和v-if的直接链接" title="v-for和v-if的直接链接">​</a></h3><p><strong>实际使用中不要将v-for和v-if一起使用</strong><br>
 <strong>性能消耗v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销</strong></p><ol><li>v-show</li></ol><ul><li>v-show通过css样式的display：none控制元素显隐  </li><li>当用v-show来隐藏元素时，只会在初次加载时渲染此dom节点，之后都是通用display来控制显隐，</li></ul><ol start="2"><li>v-if  </li></ol><ul><li>v-if通过直接控制虚拟DOM中的元素节点间接控制真实DOM上的节点控制元素显隐   </li><li>当用v-if来隐藏元素时，初次加载时就不用渲染此dom节点，提升页面加载速度</li></ul>]]></content:encoded>
             <category>面试准备</category>
-            <category>vue</category>
+            <category>Vue</category>
         </item>
         <item>
             <title><![CDATA[数据持久化和本地存储]]></title>
@@ -364,7 +445,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <category>面试准备</category>
             <category>vuex</category>
             <category>pinia</category>
-            <category>vue</category>
+            <category>Vue</category>
         </item>
         <item>
             <title><![CDATA[vue中组件通信]]></title>
@@ -374,7 +455,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <description><![CDATA[vue中组件通信]]></description>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vue中组件通信">vue中组件通信<a href="#vue中组件通信" class="hash-link" aria-label="vue中组件通信的直接链接" title="vue中组件通信的直接链接">​</a></h3><ol><li>父子组件通信</li></ol><ul><li>props </li><li><ul><li>子组件使用<code>const props = defineProps([x,y,z])</code>定义属性名，可以传入对象进行配置  </li></ul></li><li><ul><li>父组件中在创建子组件实例时使用子组件定义的属性名传递参数  </li></ul></li><li><ul><li><strong>父组件传递给子组件的props是只读的</strong></li></ul></li><li>属性透传</li><li><ul><li>在组件中设置属性，会自动传递给子组件的根元素，会继续传递给子元素</li></ul></li><li><ul><li>透传会发生在没有被声明为props和emit的属性上</li></ul></li><li><ul><li><strong>*自动透传只能传递给单根子组件</strong></li></ul></li><li><ul><li>模板中使用$attr手动访问透传属`性，在scipt中使用useAttrs()获取透传属性</li></ul></li><li><ul><li>在script标签中(非setup语法糖)使用<code>inheritAttrs：false</code>设置不发生自动透传  </li></ul></li><li>emits</li><li><ul><li>在子元素中使用<code>const emits = defineEmits([xxx])</code>定义事件名</li></ul></li><li><ul><li>在父元素中<code>@xxx = emits(yyy)</code>给xxx绑定yyy事件触发  </li></ul></li><li>ref</li><li><ul><li>给DOM节点添加ref属性，即起别名，通过$refs属性获取该节点</li></ul></li><li><ul><li>给组件添加ref属性，即起别名，通过$refs调用获取中的属性，方法</li></ul></li><li><ul><li>假如同时使用ref添加响应式数据需要指定同一属性名<code>const x = ref(null) </code></li></ul></li><li><ul><li><strong>vue3中ref获取节点所以必须在mounted之后才能获取到元素，因为setup执行时，template中的元素还没挂载到页面上</strong></li></ul></li><li>依赖注入</li><li><ul><li>在祖先组件中设置依赖<code>provide(name,value)</code></li></ul></li><li><ul><li>在后代组件中注入数据<code>const value = inject(name,default)</code></li></ul></li><li><ul><li>若有同名依赖取最近一层的祖先元素依赖</li></ul></li><li>状态管理工具</li><li>使用pinia或vuex等状态管理工具进行全局的数据控制</li></ul>]]></content:encoded>
             <category>面试准备</category>
-            <category>vue</category>
+            <category>Vue</category>
         </item>
     </channel>
 </rss>

@@ -4,20 +4,10 @@
         <title>qym的个人主页 Blog</title>
         <link>https://qym994.github.io/</link>
         <description>qym的个人主页 Blog</description>
-        <lastBuildDate>Sat, 01 Apr 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Mar 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh</language>
-        <item>
-            <title><![CDATA[不正经博客]]></title>
-            <link>https://qym994.github.io/不正经博客1</link>
-            <guid>https://qym994.github.io/不正经博客1</guid>
-            <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
-            <description><![CDATA[不正经博客]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="不正经博客">不正经博客<a href="#不正经博客" class="hash-link" aria-label="不正经博客的直接链接" title="不正经博客的直接链接">​</a></h3><p>在一个不是很正经的日子里，我写下了这篇博客</p><p>自己学习了很久的前端开发有了小的进展，这让我对未来充满了期待又有些迷茫。
-这次的选择题做对了吗?</p>]]></content:encoded>
-            <category>随笔</category>
-        </item>
         <item>
             <title><![CDATA[v-for的key问题]]></title>
             <link>https://qym994.github.io/qym-vue-6</link>
@@ -211,6 +201,26 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
             <category>问题回顾</category>
         </item>
         <item>
+            <title><![CDATA[原型链]]></title>
+            <link>https://qym994.github.io/auditon-26</link>
+            <guid>https://qym994.github.io/auditon-26</guid>
+            <pubDate>Thu, 03 May 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[原型链]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="原型链">原型链<a href="#原型链" class="hash-link" aria-label="原型链的直接链接" title="原型链的直接链接">​</a></h3>]]></content:encoded>
+            <category>面试准备</category>
+            <category>Javascript</category>
+        </item>
+        <item>
+            <title><![CDATA[防抖和节流]]></title>
+            <link>https://qym994.github.io/auditon-25</link>
+            <guid>https://qym994.github.io/auditon-25</guid>
+            <pubDate>Wed, 02 May 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[防抖和节流]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="防抖和节流">防抖和节流<a href="#防抖和节流" class="hash-link" aria-label="防抖和节流的直接链接" title="防抖和节流的直接链接">​</a></h3>]]></content:encoded>
+            <category>面试准备</category>
+            <category>Javascript</category>
+        </item>
+        <item>
             <title><![CDATA[闭包]]></title>
             <link>https://qym994.github.io/auditon-20</link>
             <guid>https://qym994.github.io/auditon-20</guid>
@@ -322,6 +332,43 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <category>Css</category>
         </item>
         <item>
+            <title><![CDATA[从地址栏输入url到显示页面]]></title>
+            <link>https://qym994.github.io/auditon-24</link>
+            <guid>https://qym994.github.io/auditon-24</guid>
+            <pubDate>Mon, 05 Feb 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[从地址栏输入url到显示页面]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="从地址栏输入url到显示页面">从地址栏输入url到显示页面<a href="#从地址栏输入url到显示页面" class="hash-link" aria-label="从地址栏输入url到显示页面的直接链接" title="从地址栏输入url到显示页面的直接链接">​</a></h3><ol><li>DNS解析，获取网站的IP地址</li><li>浏览器和服务器建立连接(tcp/ip)</li><li>向服务器发送请求(http)</li><li>服务器处理请求并返回响应(http)</li><li>浏览器渲染页面</li></ol>]]></content:encoded>
+            <category>面试准备</category>
+            <category>计算机网络</category>
+        </item>
+        <item>
+            <title><![CDATA[三次握手]]></title>
+            <link>https://qym994.github.io/auditon-23</link>
+            <guid>https://qym994.github.io/auditon-23</guid>
+            <pubDate>Sun, 04 Feb 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[三次握手]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="三次握手">三次握手<a href="#三次握手" class="hash-link" aria-label="三次握手的直接链接" title="三次握手的直接链接">​</a></h3><p>三次握手是建立TCP连接的过程，目的是在不可靠的信道上保证可靠的连接<br>
+<!-- -->三次指的是通信过程中发送了三次数据包<br>
+<!-- -->连接过程：SYN表示Synchronization同步，ACK表示ACKnowledgment确认,确认号表示确认号-1的数据都已经正确收到  </p><ol><li>客户端发送请求报文，请求首行中同步位SYN置1，同时随机添加seqc序号</li><li>服务器收到后SYN和ACK置1，同时随机添加序号seqs，确认号为acks=seqc+1</li><li>客户端收到后进行确认，ACK置1，序号为seqs+1,确认号ackc=seqc+1
+建立连接后可用https协议进行通信</li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="四次挥手">四次挥手<a href="#四次挥手" class="hash-link" aria-label="四次挥手的直接链接" title="四次挥手的直接链接">​</a></h3><p>四次挥手是指TCP的连接释放<br>
+<!-- -->释放过程：FIN表示Finish结束  ACK表示ACKnowledgment确认</p><ol><li>客户端发送连接释放报文，FIN置1，随机生成序号seqc</li><li>服务器收到后返回报文，ACK置1，随机生成序号seqs，确认号seqc+1</li><li>客户端收到后进入等待状态，从客户端到服务器的连接就释放了，此时TCP处于半关闭状态，服务器还可单向传输数据给客户端,服务端发送完毕后，发送释放报文，FIN和ACK置1，重复最后一段数据的确认号seqs+1，随机生成序号seqs1</li><li>客户端接收后，ACK置1，确认号seqs1+1，序号和第二步相同seqc+1</li><li>时间等待计时器设置2MSL后释放连接</li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="tcp和udp的区别">TCP和UDP的区别<a href="#tcp和udp的区别" class="hash-link" aria-label="TCP和UDP的区别的直接链接" title="TCP和UDP的区别的直接链接">​</a></h3><p>TCP：Transmission Control Protocol传输控制协议<br>
+<!-- -->UDP：User Datagram Protocol用户数据报协议<br>
+<!-- -->UDP是基于非连接的，面向报文，发送数据就是封装数据后由网卡发出，形式简单，性能损耗小，资源占用少，但是无法保证可靠交付，支持N对N<br>
+<!-- -->TCP是基于连接的，面向连接，保证可靠交付，支持1对1全双工通信</p>]]></content:encoded>
+            <category>面试准备</category>
+            <category>计算机网络</category>
+        </item>
+        <item>
+            <title><![CDATA[计算机网络的体系结构]]></title>
+            <link>https://qym994.github.io/auditon-22</link>
+            <guid>https://qym994.github.io/auditon-22</guid>
+            <pubDate>Sat, 03 Feb 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[计算机网络的体系结构]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="计算机网络的体系结构">计算机网络的体系结构<a href="#计算机网络的体系结构" class="hash-link" aria-label="计算机网络的体系结构的直接链接" title="计算机网络的体系结构的直接链接">​</a></h3><p>计算机网络的体系结构就是计算机网络各层加上其协议的集合</p><table><tbody><tr><th colspan="3">计算机网络分层模型</th></tr><tr><td>OSI七层模型</td><td>TCP/IP四层模型</td><td>TCP/IP五层模型</td></tr><tr><td>应用层</td><td rowspan="3">应用层(DNS,HTTP等协议)</td><td rowspan="3">应用层</td></tr><tr><td>表示层</td></tr><tr><td>会话层</td></tr><tr><td>传输层</td><td>传输层(TCP/UDP)</td><td>传输层</td></tr><tr><td>网络层</td><td>网络层(IP)</td><td>网络层</td></tr><tr><td>数据链路层</td><td rowspan="2">网络接口层</td><td>数据链路层</td></tr><tr><td>物理层</td><td>物理层</td></tr></tbody></table>]]></content:encoded>
+            <category>面试准备</category>
+            <category>计算机网络</category>
+        </item>
+        <item>
             <title><![CDATA[http状态码]]></title>
             <link>https://qym994.github.io/auditon-2</link>
             <guid>https://qym994.github.io/auditon-2</guid>
@@ -330,6 +377,27 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="http状态码">http状态码<a href="#http状态码" class="hash-link" aria-label="http状态码的直接链接" title="http状态码的直接链接">​</a></h3><ol><li>定义：http状态码是服务器返回客户端的响应状态码</li><li>具体分类</li></ol><ul><li>1xx：表示通知信息，如请求收到了或正在处理</li><li><ul><li>100：Continue 客户端继续其请求</li></ul></li><li><ul><li>101：Switching Protocols 服务器切换更高级协议</li></ul></li><li>2xx：表示成功，如接受或知道了  </li><li><ul><li>200：OK 请求成功</li></ul></li><li><ul><li>201：Created 成功请求并创建资源</li></ul></li><li><ul><li>202 ：Accepted 已接受请求但还未处理</li></ul></li><li>3xx：表示重定向：如要完成请求还需要进一步行动</li><li><ul><li>301：Moved Permanently 请求的资源已经被永久移动新URI，浏览器会重新定向到新URI</li></ul></li><li><ul><li>302：Found 请求的资源临时移动，不重定向URI</li></ul></li><li>4xx：表示客户端错误，如请求中有错误的语法或不能完成</li><li><ul><li>400：Bad Request 客户端请求的语法错误</li></ul></li><li><ul><li>401：Unauthorized 客户端身份验证未通过j</li></ul></li><li><ul><li>403：Forbidden 服务器拒绝执行请求</li></ul></li><li><ul><li>404：Not Found 服务器无法找到请求的资源</li></ul></li><li>5XX：表示服务器端错误，如服务器失效</li><li><ul><li>502：Bad Gateway 错误网关</li></ul></li></ul>]]></content:encoded>
             <category>面试准备</category>
             <category>计算机网络</category>
+        </item>
+        <item>
+            <title><![CDATA[http和https]]></title>
+            <link>https://qym994.github.io/auditon-21</link>
+            <guid>https://qym994.github.io/auditon-21</guid>
+            <pubDate>Thu, 01 Feb 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[http和https]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="http和https">http和https<a href="#http和https" class="hash-link" aria-label="http和https的直接链接" title="http和https的直接链接">​</a></h3><p>HTTP：超文本传输协议，是客户端和服务器端请求和应答的标准,数据明文传输，是无状态的协议,默认端口80<br>
+<!-- -->HTTPS:HTTPS是在HTTP上建立SSL/TLS加密层，并对传输数据进行加密，是HTTP协议的安全版，默认端口443  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="https使用步骤">https使用步骤<a href="#https使用步骤" class="hash-link" aria-label="https使用步骤的直接链接" title="https使用步骤的直接链接">​</a></h3><ol><li>客户端使用http url访问服务器，要求web服务器建立ssl连接</li><li>web服务器接到请求后将网站的证书返回(包含了公钥)给客户端</li><li>客户端和服务器开始协商SSL连接的安全顶级</li><li>双方协商一致后，建立会话密钥，通过公钥加密密钥后发送给网站</li><li>web服务器通过自己的私钥解密出会话密钥，再用会话密钥加密和客户端的通信  </li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="https协议的优点">https协议的优点<a href="#https协议的优点" class="hash-link" aria-label="https协议的优点的直接链接" title="https协议的优点的直接链接">​</a></h3><ol><li>内容加密：采用混合加密技术，中间者无法直接查看明文内容</li><li>验证身份：通过证书认证客户端访问的是自己的服务器</li><li>保护数据完整性：防止传输的内容被中间人冒充或者篡改</li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="https协议的缺点">https协议的缺点<a href="#https协议的缺点" class="hash-link" aria-label="https协议的缺点的直接链接" title="https协议的缺点的直接链接">​</a></h3><ol><li>握手比较费时</li><li>缓存不如http高效</li><li>ssl证书花费更高</li></ol>]]></content:encoded>
+            <category>面试准备</category>
+            <category>计算机网络</category>
+        </item>
+        <item>
+            <title><![CDATA[网页的渲染]]></title>
+            <link>https://qym994.github.io/auditon-27</link>
+            <guid>https://qym994.github.io/auditon-27</guid>
+            <pubDate>Sun, 14 Jan 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[网页的渲染]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="网页的渲染">网页的渲染<a href="#网页的渲染" class="hash-link" aria-label="网页的渲染的直接链接" title="网页的渲染的直接链接">​</a></h3>]]></content:encoded>
+            <category>面试准备</category>
+            <category>Vue</category>
         </item>
         <item>
             <title><![CDATA[如何拓展一个vue组件]]></title>

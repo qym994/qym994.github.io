@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[5097],{6086:e=>{e.exports=JSON.parse('{"label":"Vue","permalink":"/tags/vue","allTagsPath":"/tags","count":19}')}}]);

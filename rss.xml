@@ -201,14 +201,24 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
             <category>问题回顾</category>
         </item>
         <item>
-            <title><![CDATA[原型链]]></title>
+            <title><![CDATA[new之后发生了什么]]></title>
+            <link>https://qym994.github.io/auditon-27</link>
+            <guid>https://qym994.github.io/auditon-27</guid>
+            <pubDate>Fri, 04 May 1900 00:00:00 GMT</pubDate>
+            <description><![CDATA[new之后发生了什么]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new之后发生了什么">new之后发生了什么<a href="#new之后发生了什么" class="hash-link" aria-label="new之后发生了什么的直接链接" title="new之后发生了什么的直接链接">​</a></h3>]]></content:encoded>
+            <category>面试准备</category>
+            <category>JavaScript</category>
+        </item>
+        <item>
+            <title><![CDATA[原型]]></title>
             <link>https://qym994.github.io/auditon-26</link>
             <guid>https://qym994.github.io/auditon-26</guid>
             <pubDate>Thu, 03 May 1900 00:00:00 GMT</pubDate>
-            <description><![CDATA[原型链]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="原型链">原型链<a href="#原型链" class="hash-link" aria-label="原型链的直接链接" title="原型链的直接链接">​</a></h3>]]></content:encoded>
+            <description><![CDATA[原型]]></description>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="原型">原型<a href="#原型" class="hash-link" aria-label="原型的直接链接" title="原型的直接链接">​</a></h3>]]></content:encoded>
             <category>面试准备</category>
-            <category>Javascript</category>
+            <category>JavaScript</category>
         </item>
         <item>
             <title><![CDATA[防抖和节流]]></title>
@@ -216,9 +226,12 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
             <guid>https://qym994.github.io/auditon-25</guid>
             <pubDate>Wed, 02 May 1900 00:00:00 GMT</pubDate>
             <description><![CDATA[防抖和节流]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="防抖和节流">防抖和节流<a href="#防抖和节流" class="hash-link" aria-label="防抖和节流的直接链接" title="防抖和节流的直接链接">​</a></h3>]]></content:encoded>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="防抖和节流">防抖和节流<a href="#防抖和节流" class="hash-link" aria-label="防抖和节流的直接链接" title="防抖和节流的直接链接">​</a></h3><p>防抖和节流都是为了阻止操作高频触发，从而浪费性能<br>
+<!-- -->防抖：连续触发事件但在一定时间内只执行最后一次<br>
+<!-- -->代码实现(利用闭包)：</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">function debounce(callback,delay){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">let timer = null</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">return function(){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  clearTimeout(timer)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  timer = setTimeout(()=&gt;{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    callback.apply(this,arguments)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },delay)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>  } </p><p>节流：当持续触发事件时，保证一定时间段内只调用一次事件处理函数<br>
+<!-- -->代码实现(利用闭包)：  </p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">function throttle(callback,delay){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  let flag = true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  return function(){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    if(flag){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      setTimeout(()=&gt;{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        callback.apply(this,arguments)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        flag = true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      },delay)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      flag = false</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content:encoded>
             <category>面试准备</category>
-            <category>Javascript</category>
+            <category>JavaScript</category>
         </item>
         <item>
             <title><![CDATA[闭包]]></title>
@@ -234,7 +247,7 @@ count++
 }</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="闭包的生命周期">闭包的生命周期<a href="#闭包的生命周期" class="hash-link" aria-label="闭包的生命周期的直接链接" title="闭包的生命周期的直接链接">​</a></h3><ol><li>闭包在外部函数时调用，外部函数每次调用都会产生一个全新的闭包</li><li>在内部函数丢失时销毁(垃圾回收)</li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="闭包注意事项">闭包注意事项<a href="#闭包注意事项" class="hash-link" aria-label="闭包注意事项的直接链接" title="闭包注意事项的直接链接">​</a></h3><p>闭包主要用来隐藏一些不想被外部访问的内容，意味着需要一定的内存空间<br>
 <!-- -->相较于类来说，闭包比较浪费内存空间(类可以使用原型而闭包不能)</p>]]></content:encoded>
             <category>面试准备</category>
-            <category>Javascript</category>
+            <category>JavaScript</category>
         </item>
         <item>
             <title><![CDATA[jwt]]></title>
@@ -244,7 +257,7 @@ count++
             <description><![CDATA[jsonwebtoken]]></description>
             <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="jsonwebtoken">jsonwebtoken<a href="#jsonwebtoken" class="hash-link" aria-label="jsonwebtoken的直接链接" title="jsonwebtoken的直接链接">​</a></h3><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">const jwt = require("jsonwebtoken")</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const token = jwt.sign(</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    //传入三个参数：1.负载 2.加密密钥 3.配置对象</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    配置对象中：expiresIn属性设置过期时间</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">//服务器收到客户端的token后</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">try{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">const decodeData = jwt.verify(token,"加密密匙")}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">catch(err){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content:encoded>
             <category>面试准备</category>
-            <category>Nodejs</category>
+            <category>Node.js</category>
         </item>
         <item>
             <title><![CDATA[CORS(跨域资源共享)]]></title>
@@ -258,7 +271,7 @@ count++
 <!-- -->在路由中：<code>res.setHeader('Access-Control-Allow-Origin','允许的路径')</code><br>
 <!-- -->setHeader参数：</p><ol><li>Access-Control-Allow-Origin：设置指定值时只能设置一个  </li><li>Access-Control-Allow-Methods：允许的请求方式</li><li>Access-Control-Allow-Headers：允许传递的请求头</li></ol>]]></content:encoded>
             <category>面试准备</category>
-            <category>Nodejs</category>
+            <category>Node.js</category>
         </item>
         <item>
             <title><![CDATA[AJAX]]></title>
@@ -280,7 +293,7 @@ xhr.send()
 <code>axios.interceptors.request.use(function(config){})</code><br>请求拦截在请求发出前处理
 <code>axios.interceptors.response.use(function(config){})</code><br>在接收响应前处理</li></ol>]]></content:encoded>
             <category>面试准备</category>
-            <category>Nodejs</category>
+            <category>Node.js</category>
         </item>
         <item>
             <title><![CDATA[REST风格的服务器]]></title>
@@ -299,7 +312,7 @@ xhr.send()
 <!-- -->请求的方法：  </p><table><thead><tr><th>请求方式</th><th>请求内容</th></tr></thead><tbody><tr><td>GET</td><td>加载数据</td></tr><tr><td>POST</td><td>新建或添加数据</td></tr><tr><td>PUT</td><td>添加或修改数据</td></tr><tr><td>PATCH</td><td>修改数据</td></tr><tr><td>DELETE</td><td>删除数据</td></tr><tr><td>OPTION</td><td>由浏览器发送检查请求权限</td></tr></tbody></table><p>格式：API(接口)/Endpoint(端点)<br>
 <!-- -->例如：GET/user   DELETE/user</p>]]></content:encoded>
             <category>面试准备</category>
-            <category>Nodejs</category>
+            <category>Node.js</category>
         </item>
         <item>
             <title><![CDATA[移动端适配]]></title>
@@ -395,7 +408,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
             <guid>https://qym994.github.io/auditon-27</guid>
             <pubDate>Sun, 14 Jan 1900 00:00:00 GMT</pubDate>
             <description><![CDATA[网页的渲染]]></description>
-            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="网页的渲染">网页的渲染<a href="#网页的渲染" class="hash-link" aria-label="网页的渲染的直接链接" title="网页的渲染的直接链接">​</a></h3>]]></content:encoded>
+            <content:encoded><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new之后发生了什么">new之后发生了什么<a href="#new之后发生了什么" class="hash-link" aria-label="new之后发生了什么的直接链接" title="new之后发生了什么的直接链接">​</a></h3>]]></content:encoded>
             <category>面试准备</category>
             <category>Vue</category>
         </item>

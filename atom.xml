@@ -256,18 +256,32 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
         <category label="问题回顾" term="问题回顾"/>
     </entry>
     <entry>
-        <title type="html"><![CDATA[原型链]]></title>
-        <id>https://qym994.github.io/auditon-26</id>
-        <link href="https://qym994.github.io/auditon-26"/>
-        <updated>1900-05-03T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[原型链]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="原型链">原型链<a href="#原型链" class="hash-link" aria-label="原型链的直接链接" title="原型链的直接链接">​</a></h3>]]></content>
+        <title type="html"><![CDATA[new之后发生了什么]]></title>
+        <id>https://qym994.github.io/auditon-27</id>
+        <link href="https://qym994.github.io/auditon-27"/>
+        <updated>1900-05-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[new之后发生了什么]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new之后发生了什么">new之后发生了什么<a href="#new之后发生了什么" class="hash-link" aria-label="new之后发生了什么的直接链接" title="new之后发生了什么的直接链接">​</a></h3>]]></content>
         <author>
             <name>qym</name>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="Javascript" term="Javascript"/>
+        <category label="JavaScript" term="JavaScript"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[原型]]></title>
+        <id>https://qym994.github.io/auditon-26</id>
+        <link href="https://qym994.github.io/auditon-26"/>
+        <updated>1900-05-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[原型]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="原型">原型<a href="#原型" class="hash-link" aria-label="原型的直接链接" title="原型的直接链接">​</a></h3>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="面试准备" term="面试准备"/>
+        <category label="JavaScript" term="JavaScript"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[防抖和节流]]></title>
@@ -275,13 +289,16 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
         <link href="https://qym994.github.io/auditon-25"/>
         <updated>1900-05-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[防抖和节流]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="防抖和节流">防抖和节流<a href="#防抖和节流" class="hash-link" aria-label="防抖和节流的直接链接" title="防抖和节流的直接链接">​</a></h3>]]></content>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="防抖和节流">防抖和节流<a href="#防抖和节流" class="hash-link" aria-label="防抖和节流的直接链接" title="防抖和节流的直接链接">​</a></h3><p>防抖和节流都是为了阻止操作高频触发，从而浪费性能<br>
+<!-- -->防抖：连续触发事件但在一定时间内只执行最后一次<br>
+<!-- -->代码实现(利用闭包)：</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">function debounce(callback,delay){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">let timer = null</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">return function(){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  clearTimeout(timer)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  timer = setTimeout(()=&gt;{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    callback.apply(this,arguments)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },delay)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>  } </p><p>节流：当持续触发事件时，保证一定时间段内只调用一次事件处理函数<br>
+<!-- -->代码实现(利用闭包)：  </p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">function throttle(callback,delay){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  let flag = true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  return function(){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    if(flag){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      setTimeout(()=&gt;{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        callback.apply(this,arguments)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        flag = true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      },delay)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      flag = false</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
         <author>
             <name>qym</name>
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="Javascript" term="Javascript"/>
+        <category label="JavaScript" term="JavaScript"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[闭包]]></title>
@@ -301,7 +318,7 @@ count++
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="Javascript" term="Javascript"/>
+        <category label="JavaScript" term="JavaScript"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[jwt]]></title>
@@ -315,7 +332,7 @@ count++
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="Nodejs" term="Nodejs"/>
+        <category label="Node.js" term="Node.js"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[CORS(跨域资源共享)]]></title>
@@ -333,7 +350,7 @@ count++
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="Nodejs" term="Nodejs"/>
+        <category label="Node.js" term="Node.js"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[AJAX]]></title>
@@ -359,7 +376,7 @@ xhr.send()
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="Nodejs" term="Nodejs"/>
+        <category label="Node.js" term="Node.js"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[REST风格的服务器]]></title>
@@ -382,7 +399,7 @@ xhr.send()
             <uri>https://github.com/qym994</uri>
         </author>
         <category label="面试准备" term="面试准备"/>
-        <category label="Nodejs" term="Nodejs"/>
+        <category label="Node.js" term="Node.js"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[移动端适配]]></title>
@@ -506,7 +523,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
         <link href="https://qym994.github.io/auditon-27"/>
         <updated>1900-01-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[网页的渲染]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="网页的渲染">网页的渲染<a href="#网页的渲染" class="hash-link" aria-label="网页的渲染的直接链接" title="网页的渲染的直接链接">​</a></h3>]]></content>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new之后发生了什么">new之后发生了什么<a href="#new之后发生了什么" class="hash-link" aria-label="new之后发生了什么的直接链接" title="new之后发生了什么的直接链接">​</a></h3>]]></content>
         <author>
             <name>qym</name>
             <uri>https://github.com/qym994</uri>

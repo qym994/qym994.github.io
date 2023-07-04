@@ -2,11 +2,157 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qym994.github.io/</id>
     <title>qym的个人主页 Blog</title>
-    <updated>2023-03-28T00:00:00.000Z</updated>
+    <updated>2023-05-04T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qym994.github.io/"/>
     <subtitle>qym的个人主页 Blog</subtitle>
     <icon>https://qym994.github.io/img/qym.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[奇遇一则]]></title>
+        <id>https://qym994.github.io/blog-1</id>
+        <link href="https://qym994.github.io/blog-1"/>
+        <updated>2023-05-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[2023/5/4奇遇小记]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="202354奇遇小记">2023/5/4奇遇小记<a href="#202354奇遇小记" class="hash-link" aria-label="2023/5/4奇遇小记的直接链接" title="2023/5/4奇遇小记的直接链接">​</a></h3><p>平平无奇的下午，出校吃了一顿星轮多的午餐<br>
+<!-- -->在酒精的作用下，戴上耳机放上歌曲，很难注意到身边的事情<br>
+<!-- -->回校路上偶遇一位老爷爷打听杭电的体育馆<br>
+<!-- -->我一想问对人了，带着老爷爷往学校走，路上了解到他正在拍摄各个亚运场馆的照片<br>
+<!-- -->作为一个老杭州人，想必对自己的城市能承办亚运会有些特殊情感<br>
+<!-- -->路途不远，但一公里的路也够聊上不少<br>
+<!-- -->老爷爷是退伍老兵，研究水下兵器的，去了几个其他的亚运场馆<br>
+<!-- -->说是电竞馆人很多，年轻人喜欢，告诉我如果我想去最好五月四号以后开放再去<br>
+<!-- -->到击剑馆以后，本来想和门卫说说进去拍照<br>
+<!-- -->但是要报备，老爷爷腿脚不便由我代劳<br>
+<!-- -->拍完之后在教学区北二门和老爷爷聊了一会<br>
+<!-- -->和他提到我是云南的，老爷爷也说到之前他去过抚仙湖做研究<br>
+<!-- -->后来说到一些敏感的话题<br>
+<!-- -->老爷爷问我有没有找到工作，一瞬间有些汗颜<br>
+<!-- -->他今年八十多岁，身体还算硬朗，口齿也很清楚，年轻的时候读书还是包分配工作的<br>
+<!-- -->我和他提到我不喜欢本专业的工作，想干喜欢的事情<br>
+<!-- -->老爷爷的理解出乎我的意料<br>
+<!-- -->他也认为从事喜欢的工作能付出更多的努力<br>
+<!-- -->算是一段小奇遇<br>
+<!-- -->有些感慨，老爷爷讲述他年轻时候的故事，饱含着自豪和意气勃发<br>
+<!-- -->等我老了有什么能自豪的讲述给后辈的故事吗？</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="奇遇" term="奇遇"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《Vue.js设计与实现》- 原始值的响应方案]]></title>
+        <id>https://qym994.github.io/reading-response-6</id>
+        <link href="https://qym994.github.io/reading-response-6"/>
+        <updated>2023-05-04T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[原始值的响应方案]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="原始值的响应方案">原始值的响应方案<a href="#原始值的响应方案" class="hash-link" aria-label="原始值的响应方案的直接链接" title="原始值的响应方案的直接链接">​</a></h3><p>由于vue的响应式代理式基于Proxy实现的，无法代理原始值<br>
+<!-- -->ref使用一个包裹对象将原始值包裹于其中，在包裹对象中使用defineProperty定义一个isref区别于响应式对象<br>
+<!-- -->ref不仅实现了对原始值的响应式代理，还解决了响应丢失的问题<br>
+<!-- -->在vue中setup函数最终返回时，使用...展开运算符时会丢失响应<br>
+<!-- -->使用toRef和toRefs对数据进行访问代理，return出来的对象在get和set中均使用包裹对象建立联系<br>
+<!-- -->自动脱ref：在setup函数return出的ref数据会自动传递给proxyref处理脱掉ref，这样在模板中就不必使用.value</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="读后感" term="读后感"/>
+        <category label="Vue.js设计与实现" term="Vue.js设计与实现"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《JavaScript高级程序设计》- 第八章 对象]]></title>
+        <id>https://qym994.github.io/reading-response-5</id>
+        <link href="https://qym994.github.io/reading-response-5"/>
+        <updated>2023-04-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[对象]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="对象">对象<a href="#对象" class="hash-link" aria-label="对象的直接链接" title="对象的直接链接">​</a></h3><p>对象：一组属性/方法的无序集合<br>
+<!-- -->属性的类型：  </p><ol><li>数据属性：由四个属性描述[<!-- -->[Configurable]<!-- -->]是否可以被delete删除并重新定义, [<!-- -->[Enumberabel]<!-- -->]是否可以被for-in循环,[<!-- -->[Writable]<!-- -->]值是否可以被修改,[<!-- -->[Value]<!-- -->]对象实际的值，默认为undefined</li><li>访问器属性: 不包括数据值，由四个属性描述[<!-- -->[Configurable]<!-- -->]是否可以被delete删除并重新定义, [<!-- -->[Enumberabel]<!-- -->]是否可以被for-in循环,[<!-- -->[Get]<!-- -->]获取函数，默认为undefined,[<!-- -->[Set]<!-- -->]设置函数，默认为undefined  </li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="创建对象">创建对象<a href="#创建对象" class="hash-link" aria-label="创建对象的直接链接" title="创建对象的直接链接">​</a></h3><ol><li>工厂模式: 使用工厂函数creatXxx()</li><li>构造函数模式：使用构造函数Xxx()和new操作符，大致与工厂函数相同，有如下区别：没有显式地创建对象，属性和方法直接赋值给this，没有return</li><li>原型模式：赋值给原型对象再通过原型链，实例即可拥有属性  </li></ol><h3 class="anchor anchorWithStickyNavbar_LWe7" id="实例对象原型对象构造函数的关系">实例对象，原型对象，构造函数的关系<a href="#实例对象原型对象构造函数的关系" class="hash-link" aria-label="实例对象，原型对象，构造函数的关系的直接链接" title="实例对象，原型对象，构造函数的关系的直接链接">​</a></h3><p>实例对象的<strong>proto</strong>指向原型对象，实际上指向内部特性[<!-- -->[Prototype]<!-- -->]再指向原型对象<br>
+<!-- -->构造函数的prototype属性指向原型对象<br>
+<!-- -->原型对象的Constructor指向构造函数，由于原型继承其实实例对象也可以通过Constructor指向构造函数</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="原型链">原型链<a href="#原型链" class="hash-link" aria-label="原型链的直接链接" title="原型链的直接链接">​</a></h3><p>原型链：通过原型继承多个引用类型的属性和方法，如果原型是另一个类型的实例，这样就有原型的原型形成链条<br>
+<!-- -->默认原型：默认情况下任何函数的默认原型都是一个Object实例,Object的原型是null<br>
+<!-- -->盗用构造函数：在子类的构造函数中通过call/apply调用父类构造函数并传参，但与构造函数问题相同即函数无法复用，子类也无法访问父类原型上的方法
+组合继承：结合了原型链和盗用构造函数，通过原型链继承原型上的属性和方法，通过盗用构造函数继承实例属性</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="读后感" term="读后感"/>
+        <category label="JavaScript高级程序设计" term="JavaScript高级程序设计"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《Vue.js设计与实现》- 非原始值的响应式设计方案]]></title>
+        <id>https://qym994.github.io/reading-response-4</id>
+        <link href="https://qym994.github.io/reading-response-4"/>
+        <updated>2023-04-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Proxy]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="proxy">Proxy<a href="#proxy" class="hash-link" aria-label="Proxy的直接链接" title="Proxy的直接链接">​</a></h3><p><code>const p = new Proxy(target,{handler})</code><br>
+<!-- -->Proxy构造函数接收两个变量，第一个参数是被代理的对象，第二个参数是拦截器，也就是一组trap<br>
+<!-- -->通过在拦截器里添加第三个参数建立代理对象和副作用函数的联系，例如：<br>
+<code>get(target,key,receiver)</code>receiver可以理解为指定函数调用中的this  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="常规对象异质对象">常规对象，异质对象<a href="#常规对象异质对象" class="hash-link" aria-label="常规对象，异质对象的直接链接" title="常规对象，异质对象的直接链接">​</a></h3><p>常规对象：常规内部方法为ECMA规范10.1.x定义，内部方法[<!-- -->[Call]<!-- -->]在10.2.1定义，[<!-- -->[Construct]<!-- -->]在10.2.2定义<br>
+<!-- -->异质对象：不满足以上规定的对象<br>
+<!-- -->Proxy显然是异质对象，异质对象体现了js的多态性，在创建代理对象时如果密钥设定拦截器，则代理对象内部方法会调用原始对象的内部方法完成操作，<strong>实质上，创建代理对象时指定的handler也就是拦截函数时用来自定义代理对象本身的内部方法和行为</strong>  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="如何代理一个object">如何代理一个Object？<a href="#如何代理一个object" class="hash-link" aria-label="如何代理一个Object？的直接链接" title="如何代理一个Object？的直接链接">​</a></h3><p>拦截其属性的增删改查操作，利用Proxy对象与常规对象内部方法对应的处理器函数进行拦截，封装在相应的拦截器中<br>
+<!-- -->考虑从原型中继承属性的情况：<br>
+<!-- -->讨论属性存在于实例还是原型上，假如只存在于原型上，触发副作用函数时会触发两次，实例和原型各一次<br>
+<!-- -->判断拦截函数传入参数receiver是否是参数target的代理对象<br>
+<strong>拦截函数中receiver永远是操作的那个代理对象</strong></p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="数组和集合类型代理">数组和集合类型代理<a href="#数组和集合类型代理" class="hash-link" aria-label="数组和集合类型代理的直接链接" title="数组和集合类型代理的直接链接">​</a></h3><p>原理上都大致相同，使用和原始对象内部方法一一对应的Proxy处理器函数拦截操作<br>
+<!-- -->具体等待读完数组和集合类型相关内容后补充</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="读后感" term="读后感"/>
+        <category label="Vue.js设计与实现" term="Vue.js设计与实现"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《Vue.js设计与实现》- 响应系统的作用与实现]]></title>
+        <id>https://qym994.github.io/reading-response-3</id>
+        <link href="https://qym994.github.io/reading-response-3"/>
+        <updated>2023-04-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[响应系统的作用与实现]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="响应系统的作用与实现">响应系统的作用与实现<a href="#响应系统的作用与实现" class="hash-link" aria-label="响应系统的作用与实现的直接链接" title="响应系统的作用与实现的直接链接">​</a></h3><p>借助于代理对象Proxy,在trap的get方法和set方法中分别封装了track和trigger<br>
+<!-- -->在get中track收集副作用函数，在set中trigger触发副作用函数<br>
+<!-- -->effect函数用来注册副作用函数<br>
+<!-- -->响应系统的可调度性：trigger触发副作用函数执行时有能力决定函数执行的时机次数和方式(scheduler)  </p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="计算属性computed和懒执行lazy">计算属性computed和懒执行lazy<a href="#计算属性computed和懒执行lazy" class="hash-link" aria-label="计算属性computed和懒执行lazy的直接链接" title="计算属性computed和懒执行lazy的直接链接">​</a></h3><p>懒加载lazy：在effect函数中，options中添加lazy属性，可以指定副作用函数不立即执行<br>
+<!-- -->计算属性computed：结合调度器scheduler完成懒执行的有缓存机制(dirty的值)的副作用函数</p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="watch">watch<a href="#watch" class="hash-link" aria-label="watch的直接链接" title="watch的直接链接">​</a></h3><p>实质是对effect函数的二次封装<br>
+<!-- -->在响应式数据发生变化后，执行watch本身创建effect的调度器函数schedule，以及两个属性flush和immediate<br>
+<!-- -->竞态问题(比如异步发起请求覆盖的问题)：在watch中传入第三个参数onInvalidate注册过期回调函数，在过期回调中处理问题</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="读后感" term="读后感"/>
+        <category label="Vue.js设计与实现" term="Vue.js设计与实现"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[《Vue.js设计与实现》- 框架设计概览]]></title>
+        <id>https://qym994.github.io/reading-response-1</id>
+        <link href="https://qym994.github.io/reading-response-1"/>
+        <updated>2023-04-20T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[虚拟DOM的优点]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="虚拟dom的优点">虚拟DOM的优点<a href="#虚拟dom的优点" class="hash-link" aria-label="虚拟DOM的优点的直接链接" title="虚拟DOM的优点的直接链接">​</a></h3><p>对比虚拟DOM和innerHTML  </p><table><thead><tr><th></th><th>虚拟DOM</th><th>innerHTML</th></tr></thead><tbody><tr><td>纯JS预算</td><td>创建新的JS对象 + diff</td><td>渲染HTML字符串</td></tr><tr><td>DOM运算</td><td>必要的DOM更新</td><td>销毁旧DOM/创建新DOM</td></tr><tr><td>性能因素</td><td>更新的内容</td><td>模板大小</td></tr></tbody></table><p><strong>性能影响：DOM操作&gt;&gt;纯JS操作</strong></p><h3 class="anchor anchorWithStickyNavbar_LWe7" id="命令式和声明式框架">命令式和声明式框架<a href="#命令式和声明式框架" class="hash-link" aria-label="命令式和声明式框架的直接链接" title="命令式和声明式框架的直接链接">​</a></h3><p>声明式代码的更新消耗 = 找出差异的性能消耗 + 直接修改的性能消耗/命令式代码更新消耗<br>
+<!-- -->代码维护性：声明式代码&gt;&gt;命令式代码</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="读后感" term="读后感"/>
+        <category label="Vue.js设计与实现" term="Vue.js设计与实现"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[超级马里奥电影]]></title>
+        <id>https://qym994.github.io/reading-response-2</id>
+        <link href="https://qym994.github.io/reading-response-2"/>
+        <updated>2023-04-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[超级马里奥电影观后感]]></summary>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="超级马里奥电影观后感">超级马里奥电影观后感<a href="#超级马里奥电影观后感" class="hash-link" aria-label="超级马里奥电影观后感的直接链接" title="超级马里奥电影观后感的直接链接">​</a></h3><p>很有意思的电影，让我回想起了和父亲在家里的VCD里玩盗版碟的时光<br>
+<!-- -->电影的剧情本身就是小朋友级别，彩蛋很多看的很开心</p>]]></content>
+        <author>
+            <name>qym</name>
+            <uri>https://github.com/qym994</uri>
+        </author>
+        <category label="读后感" term="读后感"/>
+        <category label="电影" term="电影"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[v-for的key问题]]></title>
         <id>https://qym994.github.io/qym-vue-6</id>
@@ -261,21 +407,7 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
         <link href="https://qym994.github.io/auditon-27"/>
         <updated>1900-05-04T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[new之后发生了什么]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new之后发生了什么">new之后发生了什么<a href="#new之后发生了什么" class="hash-link" aria-label="new之后发生了什么的直接链接" title="new之后发生了什么的直接链接">​</a></h3>]]></content>
-        <author>
-            <name>qym</name>
-            <uri>https://github.com/qym994</uri>
-        </author>
-        <category label="面试准备" term="面试准备"/>
-        <category label="JavaScript" term="JavaScript"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[原型]]></title>
-        <id>https://qym994.github.io/auditon-26</id>
-        <link href="https://qym994.github.io/auditon-26"/>
-        <updated>1900-05-03T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[原型]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="原型">原型<a href="#原型" class="hash-link" aria-label="原型的直接链接" title="原型的直接链接">​</a></h3>]]></content>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new之后发生了什么">new之后发生了什么<a href="#new之后发生了什么" class="hash-link" aria-label="new之后发生了什么的直接链接" title="new之后发生了什么的直接链接">​</a></h3><ol><li>在内存中创建一个新对象</li><li>这个新对象内部的[<!-- -->[Protoytype]<!-- -->]特性被赋值为构造函数的prototype属性</li><li>构造函数内部的this指向新对象</li><li>执行构造函数内部的代码，给新对象添加属性</li><li>如果构造函数返回非空对象，则返回该对象，否则返回新创建的对象</li></ol>]]></content>
         <author>
             <name>qym</name>
             <uri>https://github.com/qym994</uri>
@@ -289,8 +421,7 @@ groups表示具名匹配,允许为每一个组匹配指定一个名字 ,在组�
         <link href="https://qym994.github.io/auditon-25"/>
         <updated>1900-05-02T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[防抖和节流]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="防抖和节流">防抖和节流<a href="#防抖和节流" class="hash-link" aria-label="防抖和节流的直接链接" title="防抖和节流的直接链接">​</a></h3><p>防抖和节流都是为了阻止操作高频触发，从而浪费性能<br>
-<!-- -->防抖：连续触发事件但在一定时间内只执行最后一次<br>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="防抖和节流">防抖和节流<a href="#防抖和节流" class="hash-link" aria-label="防抖和节流的直接链接" title="防抖和节流的直接链接">​</a></h3><p>防抖和节流都是为了阻止操作高频触发，从而浪费性能  </p><p>防抖：连续触发事件但在一定时间内只执行最后一次<br>
 <!-- -->代码实现(利用闭包)：</p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">function debounce(callback,delay){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">let timer = null</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">return function(){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  clearTimeout(timer)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  timer = setTimeout(()=&gt;{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    callback.apply(this,arguments)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  },delay)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div><p>  } </p><p>节流：当持续触发事件时，保证一定时间段内只调用一次事件处理函数<br>
 <!-- -->代码实现(利用闭包)：  </p><div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">function throttle(callback,delay){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  let flag = true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  return function(){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    if(flag){</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      setTimeout(()=&gt;{</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        callback.apply(this,arguments)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        flag = true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      },delay)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      flag = false</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
         <author>
@@ -523,7 +654,7 @@ align-content:设置元素辅轴方向的空白空间如何分配<br>
         <link href="https://qym994.github.io/auditon-27"/>
         <updated>1900-01-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[网页的渲染]]></summary>
-        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new之后发生了什么">new之后发生了什么<a href="#new之后发生了什么" class="hash-link" aria-label="new之后发生了什么的直接链接" title="new之后发生了什么的直接链接">​</a></h3>]]></content>
+        <content type="html"><![CDATA[<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new之后发生了什么">new之后发生了什么<a href="#new之后发生了什么" class="hash-link" aria-label="new之后发生了什么的直接链接" title="new之后发生了什么的直接链接">​</a></h3><ol><li>在内存中创建一个新对象</li><li>这个新对象内部的[<!-- -->[Protoytype]<!-- -->]特性被赋值为构造函数的prototype属性</li><li>构造函数内部的this指向新对象</li><li>执行构造函数内部的代码，给新对象添加属性</li><li>如果构造函数返回非空对象，则返回该对象，否则返回新创建的对象</li></ol>]]></content>
         <author>
             <name>qym</name>
             <uri>https://github.com/qym994</uri>
